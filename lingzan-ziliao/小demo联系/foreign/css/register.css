@@ -1,0 +1,28 @@
+header .right a.active{border-bottom:4px solid #fff;box-sizing: border-box;}
+header .right a.search{box-sizing: border-box;}
+header .right a.log{box-sizing: border-box;border-bottom:4px solid #000;}
+/*这是搜索*/
+.sub-nav{width:100%;height:100px;background:#e7e7e7;}
+.sub-nav .content{width:1200px;height:100%;margin:0 auto 0}
+.sub-nav .search{width:649px;height:40px;margin:30px 10px 0 330px;float:left}
+.sub-nav .search input{width:480px;height:100%;outline: none;border:none;}
+.sub-nav .search .button{width:130px;height:100%;background:url(../img/01searcc_03.png) no-repeat;background-size: 100% 100%;display: inline-block;float:right;margin-right:20px}
+.sub-nav .color{width:170px;height:100%;float:right;}
+.sub-nav .color img{display: inline-block;margin-top:12px;margin-right:10px}
+.sub-nav .color span{line-height:100px;float:right;display: inline-block;}
+
+
+
+.resign-box{width:570px;margin:0 auto 0}
+.resign-box h4{font-size:16px;margin-top:30px}
+.resign-box p{font-size:14px;margin-top:30px;line-height: 20px;width:500px}
+.resign-box .title{width:100%;height:30px;margin-top:40px}
+.resign-box .title span{line-height: 30px;}
+.resign-box .title i{line-height: 30px;float:right}
+.resign-box .content{width:100%;overflow: hidden;}
+.resign-box .content input{width:100%;height:45px;margin-bottom:20px;outline: none;border:1px solid #999;box-sizing: border-box;text-indent: 10px;}
+.resign-box .address{width:100%;overflow: hidden;}
+.resign-box .address select{width:250px;height:30px;margin-left:30px;margin-bottom:10px}
+.resign-box .address .zip{width:100%;overflow: hidden;}
+.resign-box .address .zip input{width:100%;height:35px;margin-bottom:20px;outline: none;border:1px solid #999;box-sizing: border-box;text-indent: 10px;}
+.resign-box .register{width:100%;height:45px;background:#000;text-align: center;line-height: 45px;color:#fff;margin-top:20px}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
+</head>
+<style>
+  .barrage .screen{width:100%;height:100%;position:absolute;top:0px;right:0px;}
+.barrage .screen .s_close{z-index:2;top:20px;right:20px;position:absolute;text-decoration:none;width:40px;height:40px;border-radius:20px;text-align:center;color:#fff;background:#000;line-height:40px;display:none;}
+.barrage .screen .mask{position:relative;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity:1);z-index:1;}
+.barrage{display:none;width:100%;height:100%;}
+.barrage .screen .mask div{position:absolute;font-size:20px;font-weight:bold;white-space:nowrap;line-height:40px;z-index:40;}
+.barrage .send{z-index:1;width:100%;height:55px;background:#000;position:absolute;bottom:0px;text-align:center;}
+.barrage .send .s_text{width:600px;height:40px;line-height:10px;font-size:20px;font-family:"微软雅黑";}
+.barrage .send .s_btn{width:105px;height:40px;background:#22B14C;color:#fff;}
+</style>
+<body>
+<a href="#" class="showBarrage">打开弹幕</a>
+  <div class="barrage">
+      <div class="screen">
+        <a href="#" class="s_close">X</a>
+        <div class="mask">
+        <!--内容在这里显示-->
+        </div>
+      </div>
+      <!--Send Begin-->
+      <div class="send">
+        <input type="text" class="s_text"/>
+        <input type="button" class="s_btn" value="说两句"/>
+      </div>
+      <!--Send End-->
+      <span class="s_close">X</span>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(function(){
+$(".showBarrage,.s_close").click(function(){
+$(".barrage,.s_close").toggle("slow");
+});
+// init_animated();
+})
+//提交评论
+$(".send .s_btn").click(function(){
+  var _height = $(window).height()
+var text = $(".s_text").val();
+var topPos = generateMixed(3); 
+var colortxt = getRandomColor(); 
+if(text == ""){
+return;
+};
+if(topPos >(_height -130)) { 
+            topPos = 30; 
+          } 
+var _lable = $("<div style='right:20px;top:"+topPos+"px;opacity:1;color:"+colortxt+";'>"+text+"</div>");
+$(".mask").append(_lable.show());
+init_barrage();
+})
+//初始化弹幕技术
+function init_barrage(){
+var _top = 0;
+$(".mask div").show().each(function(){
+var _left = $(window).width()-$(this).width();//浏览器最大宽度，作为定位left的值
+;//浏览器最大高度
+// _top +=75;
+// if(_top >= (_height -130)){
+// _top = 0;
+// }
+
+// $(this).css({left:_left,top:_top,color:getRandomColor()});
+$(this).animate({ 
+
+            left: '-' +  _left + "px" 
+          }, 20000, function() { 
+            $(this).remove(); 
+          }); 
+ $(".s_text").val(" ");
+//定时弹出文字
+// var time = 1000;
+// if($(this).index() % 2 == 0){
+// time = 15000;
+// }
+// $(this).animate({left:"-"+_left+"px"},time,function(){
+//      alert(23)
+//       $(this).remove();
+//       });
+//       }
+});
+}
+//获取随机颜色
+function getRandomColor(){
+return '#' + (function(h){
+return new Array(7 - h.length).join("0") + h
+}
+)((Math.random() * 0x1000000 << 0).toString(16))
+}
+  //生成随机数据。n表示位数   
+      var jschars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; 
+  
+      function generateMixed(n) { 
+        var res = ""; 
+        for(var i = 0; i < n; i++) { 
+          var id = Math.ceil(Math.random() * 9); 
+          res += jschars[id]; 
+        } 
+        return res; 
+      } 
+</script>
+</body>
+</html>

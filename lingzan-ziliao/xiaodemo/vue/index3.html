@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		.red{background:#999}
+		.blue{color:red}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p :class='{red:true}'>这是p标签</p>
+        <input type="text" v-model="t1" @keyup="get($event)">
+        <ul>
+            <li v-for="(value,index) in myData" :class={red:index==liindex}>
+                {{value}}
+            </li>
+        </ul>
+       <input type="text" v-model="mad" />
+       <!--<p>{{*mad}}</p>-->
+        <p v-show="myData.length==0" >暂无数据...</p>
+    </div>
+	<script src="js/vue.js"></script>
+	<script src="js/vue-resource.js"></script>
+	<script>
+            new Vue({
+                el:'#box',
+                data:{
+                    myData:[],
+                    t1:'',
+                    liindex:0,
+                    mad:'',
+                },
+                methods:{
+                    get:function(ev){
+                    	
+                        this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{params:{wd:this.t1},jsonp:'cb'}).then(function(res){
+                            this.myData=res.data.s
+                           var lengths=this.myData.length
+                           console.log(lengths)
+                           if(ev.keyCode==40){
+                        	this.liindex>=lengths?this.liindex=0:this.liindex++;
+                        	console.log(this.liindex)
+                    	};
+                    	if(ev.keyCode==38){
+                        	this.liindex<0?this.liindex=lengths-1:this.liindex--;
+                        	console.log(this.liindex)
+                    	}
+                        },function(res){
+                             console.log("失败");
+                        });
+//                      var m=1;
+                        
+                        
+                    }
+                    }
+                
+            });
+   
+    </script>
+</body>
+</html>
+
+https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=&json=1&p=3&sid=1451_24567_21101_22525_20928&req=2&sc=eb&csor=0&cb=jQuery110203981559398554988_1509007282348&_=1509007282350

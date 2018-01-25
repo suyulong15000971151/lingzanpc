@@ -1,0 +1,61 @@
+<!DOCTYPEhtml>
+<html>
+      <head>
+           <metacharset="UTF-8">
+           <title>天气</title>
+           <meta name="viewport"content="width=device-width,initial-scale=1"/>
+           <style type="text/css">
+                      .xc{
+                      width: 200px;
+                      height:200px;
+                      margin: 0 auto;
+                      background:#666;
+                 }
+           </style>
+                
+      </head>
+ 
+      <body>
+           <divid="tp-weather-widget" class="xc"></div>
+           <script>
+                 (function(T, h, i, n, k, P, a,g, e) {
+                      g = function() {
+                            P =h.createElement(i);
+                            a =h.getElementsByTagName(i)[0];
+                            P.src = k;
+                            P.charset ="utf-8";
+                            P.async = 1;
+                            a.parentNode.insertBefore(P,a)
+                      };
+                      T["ThinkPageWeatherWidgetObject"]= n;
+                      T[n] || (T[n] = function(){
+                            (T[n].q = T[n].q ||[]).push(arguments)
+                      });
+                      T[n].l = +new Date();
+                      if(T.attachEvent) {
+                            T.attachEvent("onload",g)
+                      } else {
+                            T.addEventListener("load",g, false)
+                      }
+                 }(window, document,"script", "tpwidget","//widget.thinkpage.cn/widget/chameleon.js"))
+           </script>
+           <script>
+                 tpwidget("init", {
+                       "flavor": "slim",
+                      "location":"WX4FBXXFKE4F",
+                      "geolocation":"disabled",
+                      "language":"zh-chs",
+                      "unit":"c",
+                      "theme":"chameleon",
+                      "Container":"tp-weather-widget",
+                      "bubble":"enabled",
+                      "alarmType":"badge",
+                      "color":"#F47837",
+                      "uid":"U605DCADA4",
+                      "hash":"78f46a1198d54dafa0cda717efa717a9"
+                 });
+                 tpwidget("show");
+           </script>
+          
+      </body>
+</html>

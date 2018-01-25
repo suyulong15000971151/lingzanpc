@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+    <!--<script src="js/vue.js"></script>-->
+    <!--<script src="js/vue-resource.js"></script>-->
+    <script src="bower_components/vue/dist/vue.js">
+    <script>
+    
+      window.onload=function(){
+//    	Vue.component('my-menu',{
+//    		template:"#box"
+//    	})
+
+//      str={
+//      	props:['msg'],
+//      	template:"#box"
+//      }
+//      Vue.config.keyCodes.ctrl=17;
+       Vue.config.keyCodes.ctrl=17;
+      	new Vue({
+      		el:'#app',
+      		
+      		data:{
+      			msg:"这里是数据"
+      		},
+//    		components:{
+//    			
+//    			"my-menu":{
+//    				props: ['msg'],
+//    				template:'#box',
+//    				data(){
+//    					return {
+//    						str:"zhangsan"
+//    					}
+//    				},
+//    				methods:{
+//    				upd:function(){
+//    					this.str="更新"
+//    				}
+//    			},
+//    			}
+//    			
+//    		},
+      		
+      		methods:{
+      			change:function(){
+      				alert("zhang san")
+      			}
+      		},
+//    		beforeCreate:function(){
+//    			console.log("创建之前")
+//    		},
+//    		created:function(){
+//    			console.log('创建之后')
+//    		},
+//    		beforeMount:function(){
+//    			console.log('挂载之前')
+//    		},
+//    		beforeUpdate:function(){
+//    			console.log("更新之前")
+//    		},
+//    		updated:function(){
+//    			console.log("这里是更新之后")
+//    		},
+//    		mounted:function(){
+//    			console.log("挂载之后")
+//    		},
+      		
+      		
+      	})
+      }
+    </script>
+</head>
+<body>
+	<div id="app">
+		<!--<my-menu :msg="msg"></my-menu>-->
+		<p>this is p</p>
+		<input type="text" @keyup.ctrl="change"/>
+	</div>
+	<!--<template id="box">
+		<div>
+			<h1 @click="upd">{{msg}}</h1>
+		    <a href="javascript:;">{{str}}</a>
+		</div>
+		
+	</template>-->
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+
+.ticketsSearch{
+/*	margin-top: .1rem;*/
+	border-radius: 4px 4px 0 0;
+	border:1px solid #478dcd;
+	width: 98%;
+	margin:0.1rem auto 0;
+}
+.ticketsSearch h2{
+	font-size: .14rem;
+	font-weight: normal;
+	background: #478dcd;	
+	height: .32rem;
+	line-height: .32rem;
+	border-radius: 4px 4px 0 0;
+	text-indent: .2rem;
+	color: white;
+}
+
+.ticketsSearch .travelType{
+	font-size: .12rem;
+	width: 95%;
+	margin:.0 auto;
+	padding: .1rem 0;  
+	border-bottom: 1px solid #478dcd;
+}
+.ticketsSearch .travelType input{
+	vertical-align: middle;
+	margin-left: .3rem;
+}
+.ticketsSearch .travel{
+	padding-top: .1rem;
+}
+.ticketsSearch .travel label{
+	display: block;
+	width: 90%;
+	margin:0 auto;
+}
+.ticketsSearch .travel input{
+	display: block;
+	margin:0 auto;
+	height: .18rem;
+	padding: .05rem;
+	width: 94%;
+}
+.ticketsSearch .custormType{
+	width: 50%;
+	margin:.1rem auto 0;
+}
+.ticketsSearch .custormType .right {
+	float: right;
+}
+.ticketsSearch .searchButton{
+	width: 70%;
+	margin:.1rem auto;
+	background: #f60;
+	text-align: center;	
+	font-weight: bold;
+	height: .3rem;
+	line-height: .3rem;
+	border-radius: 4px;
+	font-size: .16rem;
+}
+.ticketsSearch .searchButton a{
+	color: white;
+	display: block;
+	text-indent: .2rem;
+	letter-spacing: .2rem;
+}
+.tickets{
+	border:1px solid #478dcd;
+	width: 98%;height:1.2rem;
+	margin:0.1rem auto 0;text-align:center;}
+.tickets figure{float:left;width:20%;margin-top:.1rem;}
+.tickets figure img{margin:0 auto;}

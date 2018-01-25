@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+   body{text-align: center;}
+   span{display: inline-block;border:1px solid #ccc;padding:2px 5px;}
+	</style>
+</head>
+<body>
+    <br>output:<div id='output'></div>
+
+
+   <script type="text/javascript" >
+   // 这是乘法口诀表
+ //   var body=document.getElementsByTagName('body')
+	// function step(){
+	// 		for(i=1;i<=9;i++){
+	// 				for(j=1;j<=i;j++){
+						
+	// 					    var span=document.createElement('span')
+	// 						var text=document.createTextNode(i+"x"+j+"="+i*j +" ")
+	// 						span.appendChild(text);
+	// 						document.body.appendChild(span)
+	// 					}document.write("<br/>")
+	// 			}
+	// 	}
+	// 	step()
+ // 数组去重
+ // 这是自执行
+// (function(){
+// })()
+// var arr=[1,2,3];
+// Array.prototype.key='value';
+// arr=[3,2,1];
+// for(var i in arr){
+// 	console.log(i)
+// }
+// var fun1=function(b,c,a){
+// 	return c+a+b;
+// }
+// var fun2=function(c,a,b){
+// 	return b+c+a;
+// }
+// console.log(fun1.call(fun2,'fun1','fun2',3))
+// 这是call的经典实例
+// function add(a,b) 
+// { 
+//     alert(a+b); 
+// } 
+// function sub(a,b) 
+// { 
+//     alert(a-b); 
+// } 
+// add.call(sub,3,1);
+   var output=document.getElementById('output');
+   // output.innerHTML='<i>hello world!</i>';
+   // output.innerHTML='<script>alert(1);<\/script>';
+   output.appendChild('<b>this is appendChild</b>')
+</script>
+</body>
+</html>

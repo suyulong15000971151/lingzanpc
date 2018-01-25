@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+         var vm=new Vue({
+//              el:'#app',
+                data:{
+                	message:"wellcom world",
+                	arr:['apple','banana','oriage'],
+                	a:1
+                },
+                show:function(){
+                	alert("这里是展示的-show")
+                },
+//              beforeCreate:function(){
+//              	alert(this.message)
+//              },
+//              created:function(){
+//              	alert(this.message)
+//              },
+//              beforeMount:function(){
+//              	alert(this.message)
+//              },
+//              mounted:function(){
+//              	alert('这里是挂载之后')
+//              },
+//              beforeDestroy:function(){
+//              	console.log('这里是销毁之前')
+//              },
+//              destroyed:function(){
+//              	console.log('销毁后')
+//              },
+                computed:{
+                	b:function(){
+                		return 333
+                	}
+                },
+                methods:{
+                    get:function(){
+                    	this.$http.post('get.php',{a:2,b:3},{emulateJSON:true}).then(function(res){
+                    		alert(res.data)
+                    	},function(res){
+                    		alert(res.status)
+                    	})
+                    },
+                    push:function(){
+                    	this.arr.push(this.b)
+                    }
+                }
+            })
+//          vm.$el.style.background='red';
+            vm.$mount('.app2')
+            vm.$watch('a',function(){
+            	alert("发生了变化");
+            	console.log(vm.b=vm.a+1)
+            },{deep:true})
+//          console.log(vm.$log())
+//          vm.$options.show()
+            document.onclick=function(){
+//  		console.log(vm.$destroy)
+//  		console.log(vm.$log)
+              vm.a+=1;
+              
+    	}
+        };
+    </script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="按钮" @click="get()">
+	    <p v-html="message"></p>
+	</div>
+	<div class="app2">
+		<strong @click="push()">{{message}}</strong>
+		<ul>
+			<li v-for="value in arr">{{value}}</li>
+		</ul>
+	</div>
+</body>
+</html>

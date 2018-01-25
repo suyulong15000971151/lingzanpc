@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<aaa></aaa>
+			<bbb></bbb>
+			<ccc></ccc>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+		 var A={
+		 	template:`
+		 	          <div>
+		 	            <h1>我是组件a</h1>
+		 	            <span>
+		              </div>
+		              `
+		 }
+		 var B={
+		 	template:`
+		 	          <div>
+		 	            <h1>我是组件b</h1>
+		              </div>
+		              `
+		 }
+		 var C={
+		 	template:`
+		 	          <div>
+		 	            <h1>我是组件c</h1>
+		              </div>
+		              `
+		 }
+			new Vue({
+				el:"#box",
+				components:{
+					"aaa":A,
+					"bbb":B,
+					"ccc":C
+				}
+			})
+		</script>
+	</body>
+</html>

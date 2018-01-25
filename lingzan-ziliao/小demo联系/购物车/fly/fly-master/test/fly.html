@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fly Test Suite</title>
+  <style>
+    .test{background: red;width: 50px;height:50px;}
+    /*body{width:100%;height:1000px;}*/
+  </style>
+  <!-- Load local jQuery. -->
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Load local lib and tests. -->
+  <script src="../src/fly.js"></script>
+</head>
+<body>
+  <script>
+  $(window).click(function(ev){
+       var oEvent=ev||event;
+       var oLeft=oEvent.clientX
+       var oTop=oEvent.clientY
+      
+      $('<div class="test"></div>').fly({
+      start: {top: oTop, left: oLeft},
+      end: {top: 142, left: 322, width: 20, height: 20},
+      onEnd: function(){
+         this.destroy();
+      } 
+    });
+  })
+    
+  </script>
+</body>
+</html>

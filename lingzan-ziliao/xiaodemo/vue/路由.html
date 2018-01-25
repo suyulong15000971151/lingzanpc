@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<script src="bower_components/vue-router/dist/vue-router.js"></script>
+		<style>
+			.router-link-active{font-size: 20px;color:red}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="button" value="添加一个路由" @click="push"/>
+			<input type="button" value="替换一个路由" @click="replace"/>
+			<div>
+				<router-link to="/home">主页</router-link>
+				<router-link to="/user">新闻</router-link>
+				<router-view></router-view>
+			</div>
+			
+			
+		
+			
+		</div>
+		
+		<script>
+			var Home={
+				template:"<h1>我是主页面</h1>"
+			};
+			var User={
+				template:`
+				     <div>
+                    <h3>我是用户信息</h3>
+                    <ul>
+                        <li><router-link to="/user/zhangsan/age/10">某个用户</router-link></li>
+                    </ul>
+                    <div>
+                        <router-view></router-view>
+                    </div>
+                </div>  
+				`
+			};
+			
+			var UserDetail={
+				template:"<h3>{{$route.params}}</h3>"
+			}
+
+			const routers=[
+			          {path:"/home",component:Home},
+			          {path:"/user",
+			          component:User,
+			          children:[
+			              {path:":username/age/:age",component:UserDetail}
+			          ]
+			          }
+			]
+			var router=new VueRouter({
+				routes:routers
+			})
+			
+			
+			new Vue({
+				router:router,
+				el:"#box",p;['./;DF;popokl;g']
+				methods:{
+                push(){
+                    router.push({path:'home'});
+                },
+                replace(){
+                    router.replace({path:'user'});
+                }
+            },
+				
+			})
+			
+		</script>
+	</body>
+</html>

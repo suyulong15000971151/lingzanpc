@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+	/* index_focus */
+.index_focus{position:relative;width:100%;height:600px;margin:0 auto;overflow:hidden;min-width: 1200px;}
+.index_focus .bd{overflow: hidden;min-width: 1200px;height:600px}
+.index_focus .bd ul{min-width: 1200px;height:600px}
+.index_focus .bd li{display:none;position:absolute;left:0;top:0;overflow: hidden;min-width: 1200px;}
+.index_focus_post{z-index:10;}
+.index_focus .pic{height:auto;display:block;overflow: hidden;min-width: 1200px;}
+.index_focus .pic:hover{text-decoration:none;}
+.index_focus .slide_nav{position:absolute;left:45%;bottom:2%;}
+.index_focus .slide_nav a{cursor:pointer;float:left;display: inline-block;width:12px;height:12px;border-radius: 50%;border:1px solid #fff;margin:0 5px;}
+.index_focus .slide_nav li:hover,.index_focus .slide_nav .on{text-decoration:none;background:#fff;filter:alpha(opacity=80);opacity:0.8;}
+.index_focus_pre,.index_focus_next{display:none;position:absolute;top:50%;margin-top:-36px;width:72px;height:72px;text-indent:100%;white-space:nowrap;overflow:hidden;z-index:10;background:url(../img/ico_sliding.png) no-repeat;}
+.index_focus_pre{left:30px;background-position:0 0;}
+.index_focus_pre:hover{background-position:0 -144px;}
+.index_focus_next{right:30px;background-position:0 -72px;}
+.index_focus_next:hover{background-position:0 -216px;}
+.index_focus_info{display: none;position:absolute;left:10%;bottom:12%;width:800px;height:200px;padding-bottom:10px;color:#fff;text-decoration:none;cursor:pointer;font-family:"\5fae\8f6f\96c5\9ed1";-moz-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.6);-webkit-text-shadow:1px 1px 1px rgba(0, 0, 0, 0.6);text-shadow:1px 1px 1px rgba(0, 0, 0, 0.6);background:url("../img/index_focus_bg.png") no-repeat;_background:none;}
+.index_focus_info h3{font-size:36px;line-height:70px;font-family:\5fae\8f6f\96c5\9ed1, \u9ed1\u4f53, "Lucida Grande";display:none;}
+.index_focus_info .text{width:500px;line-height:24px;font-size:14px;word-wrap:break-word;overflow:hidden;display:none;}
+</style>
+<body>
+   <!-- 轮播 -->
+              <div class="index_focus">
+
+	           <a href="javascript:;" class="index_focus_pre" title="上一张">上一张</a>
+	           <a href="javascript:;" class="index_focus_next" title="下一张">下一张</a>
+	           
+	           <div class="bd">
+	           	<ul>
+	           		<li>
+	           			<a href="" class="pic">
+	           				
+	           				<img class="pic" src="img/1.jpg" width="100%" height="600" alt="">
+	           			</a>
+	           		</li>
+	           		<li>
+	           			<a href="" class="pic">
+	           				
+	           				<img class="pic" src="img/2.jpg" width="100%" height="600" alt="">
+	           			</a>
+	           		</li>
+	           		<li>
+	           			<a href="" class="pic">
+	           				
+	           				<img class="pic" src="img/3.jpg" width="100%" height="600" alt="">
+	           			</a>
+	           		</li>
+	           		<li>
+	           			<a href="" class="pic">
+	           				
+	           				<img class="pic" src="img/4.jpg" width="100%" height="600" alt="">
+	           			</a>
+	           		</li>
+	           		<li>
+	           			<a href="" class="pic">
+	           				
+	           				<img class="pic" src="img/5.jpg" width="=100%" height="600" alt="">
+	           			</a>
+	           		</li>
+	           	</ul>
+	           </div>
+	           
+	           <div class="slide_nav">
+	           	<a href="javascript:;"></a>
+	           	<a href="javascript:;"></a>
+	           	<a href="javascript:;"></a>
+	           	<a href="javascript:;"></a>
+	           	<a href="javascript:;"></a>
+	           </div>
+	
+         </div>
+         <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="js/jquery.SuperSlide.js"></script>
+         <script type="text/javascript">
+      	//这是轮播；
+//	$('.banner').css('width',100%)
+var width=document.body.clientWidth
+$('html').css('width',width)
+	$('.index_focus .bd').css('width',width)
+	$('.index_focus ul').css('width',width)
+	$('.index_focus li').css('width',width)
+	$('.index_focus li img').css('width',width)
+		$(".index_focus").hover(function(){
+		$(this).find(".index_focus_pre,.index_focus_next").stop(true, true).fadeTo("show", 1)
+	},function(){
+		$(this).find(".index_focus_pre,.index_focus_next").fadeOut()
+	});
+	
+	$(".index_focus").slide({
+		titCell: ".slide_nav a ",
+		mainCell: ".bd ul",
+		delayTime: 500,
+		interTime: 2000,
+		prevCell:".index_focus_pre",
+		nextCell:".index_focus_next",
+		effect: "fold",
+		autoPlay: true,
+		trigger: "click",
+		startFun:function(i){
+			$(".index_focus_info").eq(i).find("h3").css("display","block").fadeTo(1000,1);
+			$(".index_focus_info").eq(i).find(".text").css("display","block").fadeTo(1000,1);
+		}
+	});
+
+         </script>
+</body>
+</html>

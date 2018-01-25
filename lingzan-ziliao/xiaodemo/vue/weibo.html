@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能课堂 —— 微博ajax接口测试 - www.zhinengshe.com</title>
+<link href="css/weibo.css" rel="stylesheet" type="text/css" />
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script>
+        Vue.filter('date',function(input){
+            var oDate=new Date(input*1000);
+            return oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate()+' '+oDate.getHours()+':'+oDate.getMinutes()+':'+oDate.getSeconds();
+        });
+        window.onload=function(){
+            var URL='weibo.php';
+        var vm=new Vue({
+                el:'.znsArea',
+                data:{ //vue的属性、数据
+                    t1:'',
+                    msgData:[],
+                    box_:'box_',
+                    zan_:'zan_',
+                    del_:'del_'
+                    
+                    
+                },
+                methods:{
+                    add:function(){
+                        //发送请求
+                        this.$http.get(URL,{ //后台发送数据
+                               params:{act:'add',content:this.t1}
+                            }
+                        ).then(function(res){
+                        	console.log(res.status)
+                            var json=res.data;
+                            //msgData添加数据
+                             console.log(json)
+                            this.msgData.unshift({
+                                content:this.t1,
+                                time:json.time,
+                                acc:0,
+                                ref:0,
+                                id:json.id
+                            });
+
+                            this.t1='';
+                             var length=this.msgData.length
+                            console.log(length)
+                            if(length>=6){
+                            	this.msgData.splice(6,1)
+                            }
+//                          if(length>=5&&)
+                        });
+                    },
+                    getPageData:function(n){
+                    	
+                        this.$http.get(URL,{
+                                params:{act:'get',page:n}
+                            }
+                        ).then(function(res){
+                        	 
+                        	
+                        	console.log(res.status)
+                            //console.log(res.data);
+                            var arr=res.data;
+                            for(var i=0; i<arr.length; i++){
+                               this.msgData.push({
+                                   content:arr[i].content,
+                                   time:arr[i].time,
+                                   acc:arr[i].acc,
+                                   ref:arr[i].ref,
+                                   id:arr[i].id
+                               });
+                            }
+                           
+                           
+                        });
+                    },
+                    //这里点赞
+                    zan:function(n){
+                    	 //发送请求
+//                  	 var obj=ev.target.parentNode.parentNode.parentNode.id;
+//                  	 var length=$('.reply').size()
+                    	 console.log(this.innerText);
+                        var text= $('.zan_'+n).text();
+                    console.log(text)
+                        this.$http.get(URL,{ //后台发送数据
+                               params:{act:'zan',zanid:n,zannum:Number(text)}
+                            }
+                        ).then(function(res){
+                        	console.log(res.status)
+                            var json=res.data;
+                            $('.zan_'+n).text(Number(text)+1)
+                        },function(res){
+                        	console.log(res.status)
+                        });
+                    },
+                    del:function(n){
+                    	var index=$('.box_'+n).index()
+                    	var length=$('.box_'+n).length
+
+                        this.$http.get(URL,{ //后台发送数据
+                               params:{act:'del',delid:n}
+                            }
+                        ).then(function(res){
+                        	console.log(res.status)
+                            var arr=res.data;
+                           console.log(arr)
+//                       var reda= this.msgData.length-index-1;
+//                       console.log(reda)
+                            this.msgData.splice(index,1);
+                          var pae= this.msgData.length;
+                            if(pae<=5){
+                            	this.msgData=[]
+                            	this.getPageData(1)
+                            }
+                           
+                        },function(res){
+                        	console.log(res.status)
+                        });
+                    }
+                    
+                    
+                },
+                created:function(){
+                   this.getPageData(1);
+                }
+            });
+            
+            $('.page a').click(function(){
+            	var index=$(this).index()+1;
+		    $(this).addClass("active").siblings().removeClass('active')
+		    vm.msgData=[]
+		    vm.getPageData(index)
+	})
+        };
+    </script>
+</head>
+
+<body>
+<div class="znsArea">
+<!--留言-->
+     <div class="takeComment">
+        <textarea name="textarea" class="takeTextField" id="tijiaoText" v-model="t1" @keyup.enter="add"></textarea>
+        <div class="takeSbmComment">
+            <input type="button" class="inputs" value="" @click="add" />
+            <span>(可按 Enter 回复)</span>
+        </div>
+    </div>
+<!--已留-->
+    <div class="commentOn">
+        <div class="noContent" v-show="msgData.length==0">暂无留言</div>
+        <div class="messList">
+        	<div :class="box_+item.id"  v-for="(item,index) in msgData" class="reply" v-cloak>
+                <p class="replyContent">{{item.content}}</p>
+                <p class="operation">
+                    <span class="replyTime">{{item.time|date}}</span>
+                    <span class="handle">
+                    	<a href="javascript:;" class="top" @click="zan(item.id)" :class="zan_+item.id" :id=item.id>{{item.acc}}</a>
+                        <a href="javascript:;" class="down_icon">{{item.ref}}</a>
+                        <a href="javascript:;" class="cut" @click='del(item.id)'>删除</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="page">
+        	<a href="javascript:;" class="active">1</a>
+        	<a href="javascript:;">2</a>
+        	<a href="javascript:;">3</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

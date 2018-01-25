@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<style>
+	.box{width:200px;height:200px;background:#eee;position: relative;display: flex;}
+	.box .content{width:100px;height:100px;background:red;top:10px;float:right}
+</style>
+<body>
+	<div id="app">
+		{{message|uppercase}}
+	</div>
+	
+	
+	<div class="box">
+		<div class="content"></div>
+	</div>
+	
+	
+	<script src="js/vue.js"></script>
+	<!--<script>
+//		window.onload=function(){
+	Vue.filter('uppercase',function(value){
+		if(!value){return ''}
+		value=value.toString();
+		return value.charAt(0).toUpperCase()
+	})
+			new Vue({
+				el:"#app",
+				data:{
+					message:"wello"
+				}
+			})
+//		}
+	</script>-->
+	<!--<script>
+var arr = 'woainixiaoli';
+var index = -1; //定义变量index控制索引值
+//当查找不到a，即indexOf()的值为-1时，结束循环
+do {
+index = arr.indexOf("i", index + 1); //使用第二个参数index+1，控制每一次查找都是从上一次查找到字符a的下一个索引位置开始
+if (index != -1) { //可以找到字符i
+console.log(index); //输出a的位置
+}
+} while (index != -1);
+</script>-->
+<script>
+var dat=new Date()
+console.log(dat)
+
+
+var str = "zhaochucichuzuiduodezifu";
+var o = {};
+for (var i = 0, length = str.length; i < length; i++) {
+// var char = str[i];
+var char = str.charAt(i);
+if (o[char]) { //char就是对象o的一个属性，o[char]是属性值，o[char]控制出现的次数
+o[char]++; //次数加1
+} else {
+o[char] = 1; //若第一次出现，次数记为1
+}
+}
+console.log(o); //输出的是完整的对象，记录着每一个字符及其出现的次数
+//遍历对象，找到出现次数最多的字符和次数
+var max = 0;
+var maxChar = null;
+for (var key in o) {
+if (max < o[key]) {
+max = o[key]; //max始终储存次数最大的那个
+maxChar = key; //那么对应的字符就是当前的key
+}
+}
+console.log("最多的字符是" + maxChar);
+console.log("出现的次数是" + max);
+</script>
+</body>
+</html>

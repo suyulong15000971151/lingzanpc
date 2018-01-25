@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component</title>
+    <style>
+        .mystyle{
+            font-size: 100px;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    var HelloWorld = React.createClass({
+        render:function(){
+            return <h1> HelloWorld </h1>;
+        }
+    });
+
+    var Name = React.createClass({
+        render:function(){
+            return <a href="http://www.baidu.com"> 百度</a>;
+        }
+    });
+
+
+var arr = [<Name/>, <Name/>,<Name/>,<Name/>,<Name/>];
+
+    ReactDOM.render(
+            <div>
+    {arr}
+            </div>
+            ,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

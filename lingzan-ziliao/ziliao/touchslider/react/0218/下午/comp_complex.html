@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件</title>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    var WebSite = React.createClass({
+        render: function() {
+            return (
+                    <div>
+                        <Name />
+                        <Link />
+                    </div>
+            );
+        }
+    });
+
+    var Name = React.createClass({
+        render: function() {
+            return (
+                    <h1>百度</h1>
+            );
+        }
+    });
+
+    var Link = React.createClass({
+        render: function() {
+            return (
+                    <a href='http://www.baidu.com/'>官方网址</a>
+            );
+        }
+    });
+
+    ReactDOM.render(
+    <WebSite />,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

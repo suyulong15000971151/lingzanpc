@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>美加易购</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/firstPage.css" />
+		<link rel="stylesheet" href="css/lunbo.css">
+	</head>
+	<style>
+		/*设置轮播图片的高度*/
+		.slider,.slider-item{
+		height: 1.5rem;
+		}
+		/* 逐步轮播图 */
+		.picMarquee-left{ width:3.75rem;  overflow:hidden; position:relative;  }
+		.picMarquee-left .bd{ padding:.1rem; height: 1.5rem  }
+		.picMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+		.picMarquee-left .bd ul li{ margin:0 .05rem; float:left;display:inline; overflow:hidden; text-align:center;  }
+		.picMarquee-left .bd ul li .pic{ text-align:center; }
+		.picMarquee-left .bd ul li .pic img{ width:87px; height:87px; display:block; padding:2px; border:1px solid #ccc; }
+		@media only screen and (min-width: 100px) and (max-width: 320px) {
+			.picMarquee-left .bd ul li .pic img{ width:70px; height:70px; display:block; padding:2px; border:1px solid #ccc; }
+		}
+		.picMarquee-left .bd ul li .pic a:hover img{ border-color:#999;  }
+		.picMarquee-left .bd ul li .title{ line-height:24px;   }
+		.title{font-size: .12rem;height: .58rem;font-size: 0}
+	</style>
+	<body>
+		<!--可以共用的头部-->
+		<div class="topHead">
+			<div class="return fl">
+				<img src="images/leftClick.png" alt="返回按钮" />
+				<span>返回</span>
+			</div>
+			<span class="editCon fl">美加易购-科创园店</span>
+			<ul class="smallBird fl" style="padding:.2rem 0 0 .25rem;text-align: center;">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!--详情轮播图-->
+		<div class="index_focus">
+			<div class="bd">
+				<ul>
+					<li>
+						<a href="##" class="pic">
+							<img class="pic" src="images/1.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="##" class="pic">
+							<img class="pic" src="images/2.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="##" class="pic">
+							<img class="pic" src="images/3.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="##" class="pic">
+							<img class="pic" src="images/4.jpg" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="##" class="pic">
+							<img class="pic" src="images/5.jpg" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="slide_nav">
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+				<a href="javascript:;">●</a>
+			</div>
+			<div class="searchAll" style="z-index:999">
+				<div class="searchForm fl">
+					<img src="images/fl_gwc.png" alt="搜索按钮" />
+					<input type="text" placeholder="安徽宣酒" style="display: inline-block;" />
+				</div>
+			</div>			
+		</div>
+
+		<!--主体内容-->
+		<div class="newBack">
+			<ul class="list">
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="newRight fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+				<li class="newRight fl">
+					<img src="images/social01.png" alt="商品" /><br />
+					<span>酒水饮料</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="specialBack clearfix">
+			<div class="special">
+				<div class="leftLine fl"></div>
+				<p class="fl">
+					超值特惠
+					<span class="fr">查看更多<img src="images/zjt.png" alt="右箭头" /></span>
+				</p>
+			</div>
+			<!-- 从此处加入的滑动图 -->
+			<div class="picMarquee-left">
+				<div class="hd">
+					<a class="next"></a>
+					<a class="prev"></a>
+				</div>
+				<div class="bd">
+					<ul class="picList">
+						<li>
+							<div class="pic"><a href="##"><img src="images/1.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+						<li>
+							<div class="pic"><a href="##"><img src="images/2.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+						<li>
+							<div class="pic"><a href="##"><img src="images/1.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+						<li>
+							<div class="pic"><a href="##"><img src="images/2.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+						<li>
+							<div class="pic"><a href="##"><img src="images/1.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+						<li>
+							<div class="pic"><a href="##"><img src="images/2.jpg" /></a></div>
+							<div class="title">
+								<span class="firstSpan"><i>￥</i>24.8</span><br />
+								<span class="secondSpan"><i>￥</i>29.9</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 到此结束 -->
+
+		</div>
+		<div class="newUl specialBack">
+			<div class="special">
+				<div class="leftLine fl"></div>
+				<p class="fl">
+					热卖商品
+					<span class="fr">查看更多<img src="images/zjt.png" alt="右箭头" /></span>
+				</p>
+			</div>
+		</div>
+		<ul class="hotSail">
+			<li class="fl">
+				<img class="firstImg" src="images/1.jpg" alt=""/><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price">
+					<span><i>￥</i>168.99</span>
+					<i id='end'></i>
+					<img class="fr clickGwc" src="images/zy_gwc.png" alt="车子" />
+				</p>
+			</li>
+			<li class="fl">
+				<img src="" alt="" /><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price"><span><i>￥</i>168.99</span><img class="fr" src="images/zy_gwc.png" alt="车子" /></p>
+			</li>
+			<li class="fl">
+				<img src="" alt="" /><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price"><span><i>￥</i>168.99</span><img class="fr" src="images/zy_gwc.png" alt="车子" /></p>
+			</li>
+			<li class="fl">
+				<img src="" alt="" /><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price"><span><i>￥</i>168.99</span><img class="fr" src="images/zy_gwc.png" alt="车子" /></p>
+			</li>
+			<li class="fl">
+				<img src="" alt="" /><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price"><span><i>￥</i>168.99</span><img class="fr" src="images/zy_gwc.png" alt="车子" /></p>
+			</li>
+			<li class="fl">
+				<img src="" alt="" /><br />
+				<p>宣酒珍藏版5斤装 国产白酒
+					<br /><span class="nextOver">特价包邮40度浓香型 送豪礼你想要吗</span>
+				</p>
+				<p class="price"><span><i>￥</i>168.99</span><img class="fr" src="images/zy_gwc.png" alt="车子" /></p>
+			</li>
+		</ul>
+		<!--底部固定部分-->
+		<footer>
+			<div class="footN choose fl">
+				<img class="firstImg" src="images/sc1.png" alt="商城"/>
+				<p class="firstP">商城</p>
+			</div>
+			<div class="footN fl">
+				<img class="secondImg" src="images/fl2.png" alt="分类"/>
+				<p class="secondP">分类</p>
+			</div>
+			<div class="footN fl">
+				<img class="thirdImg" src="images/gwc2.png" alt="购物车" style="position: relative;"/>	
+				<p class="thirdP">购物车</p>
+			</div>
+			<div class="footN fl">
+				<img class="fourImg" src="images/wdmj2.png" alt="我的美加"/>
+				<p class="fourP">我的美加</p>
+			</div>
+		</footer>
+	</body>
+	<script src="js/fontSize.js"></script>
+	<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery.fly.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+			// 加入购物车
+			var offset=$('.thirdImg').offset();//100px
+			// console.log(offset);
+			$('.clickGwc').click(function(){
+				var addcar=$('this');
+				var img=addcar.parent().parent().prev().find('.firstImg').attr('src');
+				var flyer=$('<img class="u-flyer" src="'+img+'">');
+				flyer.fly({
+					start:{
+						left:event.pageX,
+						top:event.pageY
+					},
+					end:{
+						left:offset.left,//结束位置
+						top:offset.top,
+						width:0,
+						height:0
+					},
+					 onEnd: function(){ //结束回调 
+		                $("#clickGwc").show().animate({width: '250px'}, 200).fadeOut(1000); //提示信息 
+		                addcar.css("cursor","default").removeClass('orange').unbind('click'); 
+		                // this.destory(); //移除dom 
+           			 } 
+				})
+			})
+
+		})
+		
+	</script>
+</html>

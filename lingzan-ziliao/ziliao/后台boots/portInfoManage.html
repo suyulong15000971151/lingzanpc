@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/portInfoMange.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/table.css" />
+		<link rel="stylesheet" type="text/css" href="css/pagination.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+	</head>
+
+	<body>
+		<!--导航栏-->
+		<div></div>
+		<!--左侧分类信息-->
+		<div class="manage-left">
+			<!--基础信息管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">基础信息管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">客户信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="#">客户信心新增</a>
+							</li>
+							<li>
+								<a href="#">客户信息修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="#">合同信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">合同信息新增</a>
+							</li>
+							<li>
+								<a href="">合同信息修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">港口信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">港口信息新增</a>
+							</li>
+							<li>
+								<a href="">港口信息修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">船舶信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">船舶信息新增</a>
+							</li>
+							<li>
+								<a href="">船舶信息修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">船舶人员管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">船舶人员新增</a>
+							</li>
+							<li>
+								<a href="">船舶人员修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">危险速度管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">危险速度设置</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">危险区域管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">危险区域设置</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">水位点管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">水位点设置</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">流向信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">线路信息新增</a>
+							</li>
+							<li>
+								<a href="">线路信息修改</a>
+							</li>
+							<li>
+								<a href="">流向修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">数据批量导入</a></h3>
+						<!--<ul>
+							<li></li>
+							<li></li>
+						</ul>-->
+					</li>
+					<li>
+						<h3><a href="">消息模板管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">消息模板设置</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">临调船舶维护</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">临调船舶新增</a>
+							</li>
+							<li>
+								<a href="">临调船舶修改</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--市场管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">市场管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">散装任务管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="#">散装任务新增</a>
+							</li>
+							<li>
+								<h3><a href="#">客户订单新增</a></h3>
+								<ul>
+									<li>
+										<a href="#">流向订单修改</a>
+									</li>
+									<li>
+										<a href="#">客户流向订单</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="#">大轮动态管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">大轮动态发布</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">运单计划查询</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--营运管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">营运管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">客户任务管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="#">客户任务详情查看</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="#">运输计划管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">固定订单新增</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">运力调度管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">运力调度新增</a>
+							</li>
+							<li>
+								<a href="">余量临调发布</a>
+							</li>
+							<li>
+								<a href="">余量临调维护</a>
+							</li>
+							<li>
+								<a href="">运力调度修改</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">订单航次发布</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">航次信息发布</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">磅差信息管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">磅差信息调整</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">船舶状态管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">船舶状态更新</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">船舶任务查询</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--船运管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">船运管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">船舶动态监测</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="#">船舶状态查询</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="#">轨迹回放查询</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--财务管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">财务管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">运费结算清单</a></h3>
+					</li>
+					<li>
+						<h3><a href="#">客户 运价管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">客户运价新增</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">船户运算管理</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">船户运价设定</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">客户结算管理</a></h3>
+					</li>
+					<li>
+						<h3><a href="">船户结算管理</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--报表管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">报表管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">磅差明细表</a></h3>
+					</li>
+					<li>
+						<h3><a href="#">磅差汇总表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">航次统计表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年度计划统计</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年度各收货单位熟料运输计划</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年船运散装运输计划表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年各发货单位煤炭运输计划</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年经营业务运输计划表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年船运集装箱运输计划表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年码头熟料中转计划表</a></h3>
+					</li>
+					<li>
+						<h3><a href="">年安吉南方运输计划表</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--抢单APP管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">抢单APP管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">船户信息审核</a></h3>
+					</li>
+					<li>
+						<h3><a href="#">抢单信息审核</a></h3>
+						<ul class="second-list">
+							<li>
+								<a href="">抢单信息审核详情</a>
+							</li>
+							<li>
+								<a href="">抢单审核信息查询</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h3><a href="">临调订单查询</a></h3>
+					</li>
+					<li>
+						<h3><a href="">用户信息查询</a></h3>
+					</li>
+					<li>
+						<h3><a href="">船户星级维护</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+			<!--系统管理-start-->
+			<div class="basic-info-manage manage-list">
+				<div class="basic-info-manage-title manage-info-set">
+					<a href="#">系统管理</a>
+				</div>
+				<ul class="basic-info-list">
+					<li>
+						<h3><a href="#">菜单管理</a></h3>
+					</li>
+					<li>
+						<h3><a href="#">用户管理</a></h3>
+					</li>
+					<li>
+						<h3><a href="">角色管理</a></h3>
+					</li>
+					<li>
+						<h3><a href="">数据字典</a></h3>
+					</li>
+				</ul>
+			</div>
+			<!--end-->
+
+		</div>
+
+		<!--右侧分类页面-->
+		<div class="manage-right">
+			<!--右侧头部-->
+			<div>
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">基础管理</a>
+					</li>
+					<li class="active">港口信息管理</li>
+				</ol>
+			</div>
+			<div class="search-area clearfix">
+				<div class="input-group">
+					<input id="portContent" type="text" class="form-control" placeholder="请输入查询内容" aria-describedby="basic-addon1">
+				</div>
+				<button type="button" class="btn btn-info search-btn">查询</button>
+				<button type="button" class="btn btn-info import-btn">导出</button>
+			</div>
+			<div class="portBox">
+				<div class="port-operate">
+					<ul class="clearfix">
+						<li class="port-operate-add">添加</li>
+						<li class="port-operate-del">删除</li>
+						<li class="port-operate-edit">编辑</li>
+					</ul>
+				</div>
+				<div class="port-table list-wrap">
+					<div class="section-grid clearfix">
+	                    <ul class="g-row g-row-head clearfix">
+	                        <li class="g-head portCheckBox"><input type="checkbox" /></li>
+	                        <li class="g-head port-num">序号</li>
+	                        <li class="g-head port-serial">港口编号</li>
+	                        <li class="g-head port-name">港口名称</li>
+	                        <li class="g-head port-type">港口类型</li>
+	                        <li class="g-head port-company">所属单位</li>
+	                        <li class="g-head port-position">港口位置</li>
+	                        <li class="g-head port-state">状态</li>
+	                        <li class="g-head port-note">备注</li>
+	                    </ul>
+	                    <div class="list-content J_listContent"></div>
+	                </div>
+				</div>
+				
+				 <!-- 列表 [[ -->
+                <script type="text/html" id="list-tpl">
+                    <!--{{if total > 0}}-->
+                    {{each list as item}}
+	                    <ul class="g-row clearfix">
+	                        <li class="g-data portCheckBox"><input type="checkbox" /></li>
+	                        <li class="g-data port-num">{{item.id}}</li>
+	                        <li class="g-data port-serial">{{item.creatorId}}</li>
+	                        <li class="g-data port-name">{{item.creator}}</li>
+	                        <li class="g-data port-type">{{item.created}}</li>
+	                        <li class="g-data port-company">{{item.updated}}</li>
+	                        <li class="g-data port-position">{{item.portNo}}</li>
+	                        <li class="g-data port-state">{{item.name}}</li>
+	                        <li class="g-data port-note">{{item.portType}}</li>
+	                    </ul>
+                    {{/each}}
+                    <!--{{/if}}-->
+
+                    {{if totalCount > 0}}
+                    <div class="jr-pagination mt20">
+                        <div class="previous fl"><i></i><span class="ml20">上一页</span></div>
+                        <div class="page fl">
+                            {{#paginationHtml}}
+                        </div>
+                        <div class="next fl"><span class="mr20 fr">下一页</span><i></i></div>
+                        <span class="fl pagination-txt mr7">向第</span>
+                        <input class="jump-to-num fl" value="6"></input>
+                        <span class="fl pagination-txt mr7">页</span>
+                        <span class="jump fl pagination-txt mr40">跳转</span>
+                    </div>
+                    {{/if}}
+                </script>
+                <!-- 列表 ]] -->
+
+                <!-- 查询等待模版 [[ -->
+                <script type="text/html" id="wait-tpl">
+                    <ul class="g-row wait-wrap">
+                        <li class="wait">
+                            <div class="info">
+                                <img width="24px" height="12px" src="https://resjrprd.suning.com/finance/project/myfinance/style/images/loading.gif"></img>
+                                <span class="wait-txt">正在查询，请稍候...</span>
+                            </div>
+                        </li>
+                    </ul>
+                </script>
+                <!-- 查询等待模版 ]] -->
+
+                <!-- 查询为空模版 [[ -->
+                <script type="text/html" id="empty-tpl">
+                    <ul class="g-row wait-wrap">
+                        <li class="wait">
+                            <div class="info">
+                                <div class="desc">抱歉，没有找到相应的信息</div>
+                            </div>
+                        </li>
+                    </ul>
+                </script>
+                <!-- 查询为空模版 ]] -->
+			</div>
+		</div>
+		
+		<!--遮罩-->
+		<div class="mark"></div>
+		<!--添加-->
+		<div class="click-port-info-add">
+			<div class="click-port-info-add-title">
+				<h3>添加港口信息<i></i></h3>
+			</div>
+			<form action="" method="post">
+				<dl class="clearfix">
+					<dt>港口编号：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口名称：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口类型：</dt>
+					<dd>
+						<select name="">
+							<option value="">请选择</option>
+							<option value="">集装箱</option>
+							<option value="">其他</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>所属单位：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口位置(经纬度)：</dt>
+					<dd>
+						<input type="text" />
+						<span class="obtain-coordinate">获取坐标</span>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口半径(米)：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>备注：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				
+				<div class="close-panel">
+					<input type="submit" value="确定"/>
+					<span>关闭</span>
+				</div>
+			</form>
+		</div>
+		<script src="js/lib/require.min.js" data-main='js/main/portInfoManage' type="text/javascript" charset="utf-8"></script>
+		<!--<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			  		$.ajax({
+			  			type:'POST',
+			  			url:'http://47.100.45.229:8080/xyl/port/getList',
+			  			dataType:'jsonp',
+//			  			 jsonpCallback:"success_jsonpCallback",
+			  			success:function(msg){
+			  				console.log(msg)
+//			
+			  				
+			  		},
+			  		error:function(){
+			  			console.log("错误")
+			  		}
+			  		})
+			  	})
+		</script>-->
+	</body>
+
+</html>

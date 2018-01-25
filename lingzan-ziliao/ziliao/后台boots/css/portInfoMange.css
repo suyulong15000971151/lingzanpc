@@ -1,0 +1,139 @@
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+.search-area{
+	margin-left: 1%;
+	margin-bottom: 20px;
+}
+.search-area .form-control{
+	margin-bottom: 0;
+}
+.input-group{
+	float: left;
+	margin-right: 30px;
+}
+.search-btn{
+	margin-right: 20px;
+}
+.port-operate ul{
+	margin-left: 1%;
+}
+.port-operate ul li{
+	float: left;
+    width: 70px;
+    font-size: 14px;
+    line-height: 42px;
+    text-indent: 30px;
+    cursor: pointer;
+    color: #333;
+}
+.port-operate-add{
+	background: url(images/icon_2.png) no-repeat 0 center
+}
+.port-operate-del{
+	background: url(images/icon_4.png) no-repeat 0 center
+}
+.port-operate-edit{
+	background: url(images/icon_3.png) no-repeat 0 center
+}
+.port-table table{
+	width: 99%;
+	margin-left: 1%;
+}
+.click-port-info-add{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	background: #35BAF6;
+	width: 500px;
+	height: 384px;
+	margin-left: -250px;
+	margin-top: -191px;
+	display: none;
+}
+.click-port-info-add form{
+	background: #fff;
+	margin: 1px;
+	padding-top: 20px;
+}
+.click-port-info-add dt{
+	float: left;
+	width: 150px;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 20px;
+}
+.click-port-info-add dd{
+	float: left;
+}
+.click-port-info-add input[type=submit]{
+	width: 60px;
+	height: 30px;
+	color: #FFF;
+	background: #3399ff;
+	font-size: 14px;
+	border: none;
+	margin-left: 170px;
+	/*margin-top: 20px;*/
+	border-radius: 4px;
+}
+.port-info-add-switch{
+	width: 60px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.port-info-add-switch span{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.port-info-add-switch span.port-info-add-switch-on{
+	background: #337ab7;
+	color: #FFF;
+}
+.port-info-add-switch span.port-info-add-switch-off{
+	background: #eeeeee;
+	/*display: none;*/
+}
+.click-port-info-add-title{
+	height: 40px;
+	
+}
+.click-port-info-add-title h3{
+	font-size: 16px;
+    line-height: 40px;
+    margin: 0 0 0 20px;
+    color: #f0f0f0;
+    font-weight: 500;
+}
+.click-port-info-add-title h3 i{
+	display: block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	background: url(images/cha_03.png) no-repeat;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.close-panel{
+	margin-top: 10px;
+}
+.close-panel span{
+	display: inline-block;
+    width: 60px;
+    height: 31px;
+    text-align: center;
+    line-height: 30px;
+    background: #3399ff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+}

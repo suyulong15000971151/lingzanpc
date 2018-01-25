@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setState</title>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    var Counter = React.createClass({
+        getInitialState: function () {
+            return { clickCount: 0 };
+        },
+        handleClick: function () {
+            this.setState(function(state) {
+                return {clickCount: state.clickCount + 1};
+            });
+        },
+        render: function () {
+            return (<h2 onClick={this.handleClick}>点我！点击次数为: {this.state.clickCount}</h2>);
+        }
+    });
+    ReactDOM.render(
+    <Counter />,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

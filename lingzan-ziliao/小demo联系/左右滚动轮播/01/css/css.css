@@ -1,0 +1,32 @@
+@charset "gb2312";
+h1, h2, h3, h4, h5, h6, h7, p, ul, ol, dl, dt, dd, li, body, form, input, button, img, cite, strong, em, td, th { padding:0; margin:0;}
+h1, h2, h3, h4, h5, h6, h7 { font-size:14px; font-weight:bold;}
+img, table, td, th { border:0;}
+ul, ol { list-style-type:none; padding:0; margin:0;}
+a:link,a:visited { color:#000; text-decoration:none;}
+a:hover { color:#000; text-decoration: none;}
+body { margin:0; padding:0;color: #404040;font: 12px/1.4 'Microsoft Yahei','Simsun','΢���ź�','����',Tahoma,arial;}
+
+.clear { clear:both; font-size:0; height:0; overflow:hidden;}
+.clear2 { clear:both; font-size:10px; height:2px; overflow:hidden; line-height:10px;}
+.clear10 { clear:both; font-size:10px; height:10px; overflow:hidden; line-height:10px;}
+.fleft { float:left;}
+.fright { float:right;}
+
+/*main05 start*/	
+.main05{width:1000px;height:195px;margin:0 auto;border-left:1px solid #d8e5f3;border-right:1px solid #d8e5f3;border-bottom:1px solid #d8e5f3;border-top:2px solid #458fce;}
+.main05_01{height:32px;line-height:32px;width:345px;background:#f6f9fe;width:1000px;}
+.main05_01 h2{float:left;width:100px;color:#458fce;padding-left:15px;text-align:left;}
+.main05_01 span{float:right;width:100px;color:#458fce;padding-right:15px;text-align:right;}
+.main05_02{width:980px;margin:0 auto;padding-top:20px;}
+/*幻灯*/
+.carousel .prev , .carousel .next {height:23px;width:23px;overflow:hidden;display:block;margin-top:40px;text-decoration:none;cursor:pointer;}
+.carousel .prev {float:left;background:url(../images/imageNavLeft.gif) no-repeat;width:24px;height:54px;}
+.carousel .next {float:left;background:url(../images/imageNavRight.gif) no-repeat;width:24px;height:54px;}
+.jCarouselLite {float:left;width:990px;height:155px;overflow:hidden;}
+.jCarouselLite li{height:155px;width:155px;text-align:center;}
+.jCarouselLite li a{position:absolute;display:block;margin-left:15px ;*margin-left:-60px;}
+.jCarouselLite li a:link img,.jCarouselLite li a:visited img{border:0px solid #ddd;}
+.jCarouselLite li a:hover img {border:0px solid #d10300;}
+.jCarouselLite li a span{width:118px;background:#000;display:block;position:absolute;bottom:0;left:0;color:#fff;filter:alpha(opacity=50);-moz-opacity:0.6;opacity:0.6;font:bold 12px/30px Verdana, Arial; text-align:center;cursor:hand;z-index:1000;}
+/*main05 end*/

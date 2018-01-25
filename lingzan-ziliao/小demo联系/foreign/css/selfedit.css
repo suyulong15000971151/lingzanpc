@@ -1,0 +1,21 @@
+.content .content-box .self{line-height:50px}
+.content .content-box .self p{margin-bottom: 30px;}
+.content .content-box .self .item{height:50px;width:100%;overflow: hidden;margin-bottom: 30px;}
+.content .content-box .self input{text-indent: 10px;width:420px;height:50px;float:right;box-sizing: border-box;margin-right:20px}
+a{color:#000}
+.content .content-box .self .set{width:100%;height:45px;overflow: hidden;margin-top:50px;color:#fff;line-height: 45px;}
+.content .content-box .self .set span{text-align: center;width:240px;height:45px;background:#000;display: inline-block;}
+.content .content-box .self .set i{text-align: center;width:240px;height:45px;background:#000;display: inline-block;margin-left:100px}
+.content .content-box .self .set i a{display: block;width:100%;height:100%;color:#fff}
+/*这是地址address弹窗*/
+.content .content-box .address{position: relative;}
+.content .content-box .address .selfadd{position: absolute;width:100%;height:625px;background:#fff;left:0;top:0;display: none;}
+.content .content-box .address .selfadd p{height:50px;margin-bottom:30px;line-height: 50px;}
+.content .content-box .address .selfadd input{width:560px;height:50px;margin-bottom:30px;box-sizing: border-box;}
+.content .content-box .address .selfadd select{width:250px;height:30px;margin-bottom:17px}
+.content .content-box .address .selfadd .code{width:100%;overflow: hidden;}
+.content .content-box .address .selfadd .code input{width:560px;height:35px;margin-bottom:18px;box-sizing: border-box;}
+
+.content .content-box .address .selfadd .set-address{width:100%;height:45px;overflow: hidden;margin-top:34px;color:#fff;line-height: 45px;}
+.content .content-box .address .selfadd .set-address span{text-align: center;width:240px;height:45px;background:#000;display: inline-block;}
+.content .content-box .address .selfadd .set-address i{text-align: center;width:240px;height:45px;background:#000;display: inline-block;margin-left:100px}

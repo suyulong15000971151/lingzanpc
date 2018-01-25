@@ -1,0 +1,35 @@
+header .right a.active{border-bottom:4px solid #fff;box-sizing: border-box;}
+header .right a.search{box-sizing: border-box;}
+header .right a.log{box-sizing: border-box;border-bottom:4px solid #000;}
+/*这是搜索*/
+.sub-nav{width:100%;height:100px;background:#e7e7e7;}
+.sub-nav .content{width:1200px;height:100%;margin:0 auto 0}
+.sub-nav .search{width:649px;height:40px;margin:30px 10px 0 330px;float:left;}
+.sub-nav .search input{width:480px;height:100%;outline: none;border:none;}
+.sub-nav .search .button{width:130px;height:100%;background:url(../img/01searcc_03.png) no-repeat;background-size: 100% 100%;display: inline-block;float:right;margin-right:20px}
+.sub-nav .color{width:170px;height:100%;float:right;}
+.sub-nav .color img{display: inline-block;margin-top:12px;margin-right:10px}
+.sub-nav .color span{line-height:100px;float:right;display: inline-block;}
+.color-s{border-bottom: 4px solid #000;box-sizing: border-box;}
+/*这是搜索框的内容*/
+.color-box{width:1200px;overflow: hidden;margin:0 auto 0;}
+.color-box .left{width:600px;display: inline-block;float:left;overflow: hidden;}
+.color-box .left ul{overflow: hidden;width:470px;transform: rotate(-45deg);height:500px;margin:50px 280px;}
+.color-box .left ul li{width:100px;height:100px;background:olive;float:left;margin:10px 10px;border-radius: 50%;transition: all 0.5s ease;}
+.color-box .left ul li:hover{transform: scale(1.1);}
+.color-box .left ul li.l1{background:red;}
+.color-box .left ul li.l2{background:#000;}
+.color-box .left ul li.l3{background:olive;}
+.color-box .left ul li.l4{background:yellow;}
+.color-box .left ul li.l5{background:green;}
+.color-box .left ul li.l6{background:gray;}
+
+.color-box .right{width:600px;display: inline-block;float:left;}
+.color-box .right .title{margin-top:50px;line-height: 30px;}
+.color-box .right ul{width:100%;overflow: hidden;margin:30px 0;}
+.color-box .right ul li{float:left;width:150px;height:150px;margin-right:20px;margin-bottom:20px;border:1px solid #999;position: relative;}
+.color-box .right ul li span{display: inline-block;width:25px;height:25px;background:url(../img/cha.png) no-repeat;float:right;z-index: 33;}
+
+.color-box .right .contion{width:100%;overflow: hidden;margin-top:50px;border-top:1px solid #999;padding-top:30px}
+.color-box .right .contion .sou{width:130px;height:40px;display: inline-block;float:left;background:url(../img/01searcc_03.png) no-repeat;background-size: 100% 100%;}
+.color-box .right .contion .remove{width:200px;height:40px;display: inline-block;float:right;background:url(../img/plete_03.png) no-repeat;background-size: 100% 100%;}

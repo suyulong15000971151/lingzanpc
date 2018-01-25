@@ -1,0 +1,59 @@
+h2{width:100%;height:0.53rem;margin:.1rem auto 0;color:#fff;
+ background: url(../images/bg_tlisthd.png) repeat-x;line-height: .53rem;
+ text-align: center;font-size:.16rem;
+}
+.thead{
+	margin-top: .07rem;
+	height: .52rem;
+	width: 100%;
+	line-height: .52rem;
+	background: url(../images/bg_tlisthd.png) repeat-x;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: .16rem;
+}
+.account{
+	margin-top: .2rem;
+	width: 100%;
+	background: white;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	font-size: .14rem;
+}
+.account li{
+	width: 95%;
+	height: .3rem;
+	line-height: .25rem;
+	margin:0 auto;
+	background: white;	
+	border-bottom: 1px solid #eee;
+	text-indent: .2rem;
+}
+.account li a{
+	color: #666;
+	display: block;
+}
+.account li i{
+	display: block;
+	float: right;
+	font-family: '宋体';
+	font-weight: bold;
+	color: #ccc;
+	margin-right: .2rem;
+}
+p.exit{
+	background: #9d0808;
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	height: .3rem;
+	line-height: .3rem;
+	text-align: center;
+	border-radius: 4px;
+	bottom: .4rem;
+}
+p a{
+	display: block;
+	color: white;
+}

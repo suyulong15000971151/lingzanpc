@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+		<script src="js/vue.js"></script>
+		<style>
+			.box{width:100px;height:100px;background:red;margin:0 auto 0}
+			.fade-transition{
+			transition: 1s all ease;	
+		}
+		.fade-enter{
+			opacity: 0;
+		}
+		.fade-leave{
+			opacity: 0;
+			transform: translateX(200px);
+		}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<aaa></aaa>
+			<input type="button" value="按钮" @click="toggle">
+		    <div class="box" v-show="bSign" transition="fade"></div>
+		</div>
+		<!--<template id="aaa">
+			<h1>****</h1>
+			<slot>这是默认的情况</slot>
+			<p>welcome vue</p>
+		</template>-->
+		<script>
+		new	Vue({
+				el:"#box",
+				data:{
+					a:"aaa",
+					msg:"welcome vue",
+					bSign:true
+				},
+				methods:{
+					toggle:function(){
+						this.bSign=!this.bSign;
+					}
+				},
+				components:{
+					'aaa':{
+						data(){
+							return {
+								msg:"hello vue"
+							}
+						},
+						methods:{
+							change:function(){
+								this.msg="changed"
+							}
+						},
+						template:'<h1 @click="change">{{msg}}</h1>'
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

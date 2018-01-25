@@ -1,0 +1,53 @@
+.product{width:1200px;overflow: hidden;margin:50px auto 0;}
+.product .left{width:600px;display: inline-block;float: left;}
+.product .left img{width:600px;height:600px;}
+.product .right{width:600px;display: inline-block;float: left;}
+.product .right .title{width:100%;height:20px;overflow: hidden;background:url(../img/back_03.png) no-repeat 460px center;text-align: right;}
+.product .right .rif{width:97%;overflow: hidden;margin-left:20px;border-bottom:1px solid #ccc;padding-bottom:15px}
+.product .right .rif h2{font-size:16px;line-height:30px;margin:20px 0 0;}
+.product .right .rif p{font-size:13px;line-height: 20px;margin:7px 0 0;padding:0}
+
+.product .right .metre{line-height: 80px;height:89px;width:97%;overflow: hidden;margin-left:20px;border-bottom:1px solid #ccc;}
+.product .right .metre span{font-size:13px;margin-left:0}
+.product .right .metre input{display: inline-block;width:80px;height:30px;margin:25px 0 0 100px;}
+.product .right .metre i{width:150px;height:30px;float:right;text-align:center; background:#000;display: inline-block;line-height: 30px;color:#fff;margin-top:25px}
+.product .right .size{line-height: 30px;width:97%;overflow: hidden;margin-left:20px;}
+.product .right .size h3{height:50px;line-height: 50px;font-size: 16px;}
+.product .right .size .name{font-size:15px;font-weight: 600;width:50%;display: inline-block;float:left}
+.product .right .size .name p{margin:0;padding:0;}
+.product .right .size .sum{font-size: 13px;width:50%;display: inline-block;float:left;color:#999;background:#fff;text-align: left;}
+.product .right .size .sum span{background: #fff;text-align: left;color:#999;margin:0;padding:0;line-height: 30px;}
+
+
+
+.product .right .title a{display: inline-block;float:right;text-decoration: underline;}
+.product .right h4{font-size:16px;line-height: 40px;height:40px;margin:20px 0 0;padding-left:20px;box-sizing: border-box;}
+.product .right p{line-height:30px;font-size:15px;padding-left:20px;box-sizing: border-box;margin:20px 0 20px}
+.product .right span{margin-left:20px;display: inline-block;width:200px;height:40px;background:#000;text-align: center;line-height: 40px;color:#fff}
+/*这是一横刚*/
+.line{width:100%;height:1px;background:#999;margin:30px 0 30px}
+
+.result{width:1200px;overflow: hidden;margin:0 auto 0}
+.line1{margin-bottom:0}
+.result2{width:100%;overflow: hidden;margin:0 auto 0;background:#e8e8e8}
+.result .result-title{width:100%;height:60px;line-height: 60px;font-size: 16px;font-weight: 600;background:url(../img/Homeicon1.png) no-repeat 0px center;text-indent: 20px;}
+.result .content{width:100%;overflow: hidden;}
+.result .content ul{overflow: hidden;width:1400px}
+.result .content ul li{width:160px;margin-right:50px;margin-bottom:20px;float:left}
+.result .content ul li img{width:160px;height:160px;margin-bottom:10px;}
+.result .content ul li p{background:url(../img/SEARCHicon.png) no-repeat right center;height:20px;line-height: 20px;}
+/*这是是放大镜*/
+.cloud-zoom-lens {margin:-4px;background-color:#fff;}
+/* 这是标题文本 */
+.cloud-zoom-title {font-family:Arial, Helvetica, sans-serif;position:absolute !important;background-color:#000;color:#fff;padding:3px;width:100%;text-align:center;font-weight:bold;font-size:10px;top:0px;}
+/* 这是缩放窗口。 */
+.cloud-zoom-big {overflow:hidden;margin-left:4px;margin-top:4px;}
+/* 这是加载消息。 */
+.cloud-zoom-loading {color:white;background:#222;padding:3px;}
+
+.zoom-section{clear:both;margin-top:20px;}
+*html .zoom-section{display:inline;clear:both;}
+.zoom-desc{float:left;margin-left:10px;width:310px;margin-bottom:20px;}
+.zoom-small-image{float:left;margin-bottom:20px;}
+.zoom-tiny-image{margin:0px;}
+.zoom-tiny-image:hover{}

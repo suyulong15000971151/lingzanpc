@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="bower_components/vue/dist/vue.js"></script>
+	<!--<script src="vue.js"></script>-->
+</head>
+<body>
+	<div id="box">
+		<aaa>
+			<strong slot="sub-sloat">hello slot</strong>
+		</aaa>
+		
+		
+		
+	</div>
+	
+	<!--<template id="aaa">
+		<h1>****</h1>
+		<slot>这是默认的情况</slot>
+		<p>welcome vue</p>
+	</template>-->
+	<script>
+		new Vue({
+			el:"#box",
+			data:{
+				a:"aaa"
+			},
+			components:{
+				"aaa":{
+					data(){
+						return{
+							msg:"这里是数据"
+							}
+					},
+					template:"<div><h1>this is aaa</h1><p>{{msg}}</p><slot name='sub-sloat'></slot></div>",
+					
+				}
+			}
+		})
+	</script>
+</body>
+</html>

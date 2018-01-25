@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form2</title>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/babel">
+    var HelloMessage = React.createClass({
+        getInitialState: function() {
+            return {value: 'Hello 尚学堂!'};
+        },
+        handleChange: function(event) {
+            this.setState({value: '欢迎你！'})
+        },
+        render: function() {
+            var value = this.state.value;
+            return <div>
+            <button onClick={this.handleChange}>点我有惊喜</button>
+            <h4>{value}</h4>
+            </div>;
+        }
+    });
+    ReactDOM.render(
+    <HelloMessage />,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+.port-info-add dt{
+	float: left;
+	width: 200px;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 20px;
+}
+.port-info-add dd{
+	float: left;
+}
+.port-info-add input[type=submit]{
+	width: 60px;
+	height: 30px;
+	color: #FFF;
+	background: #3399ff;
+	font-size: 14px;
+	border: none;
+	margin-left: 220px;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+.port-info-add-switch{
+	width: 60px;
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.port-info-add-switch span{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+.port-info-add-switch span.port-info-add-switch-on{
+	background: #337ab7;
+	color: #FFF;
+}
+.port-info-add-switch span.port-info-add-switch-off{
+	background: #eeeeee;
+	/*display: none;*/
+}

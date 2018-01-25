@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <title>默认</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        img{display: block;}
+    </style>
+</head>
+<body>
+<img src="375@667.jpg" alt="iPhone6">
+<img src="750@1334.jpg" alt="iPhone6 plus">
+<img src="980@667.jpg" alt="默认宽度">
+</body>
+<script>
+    var fontSize = 50;
+    var _w = document.body.clientWidth;
+    document.getElementsByTagName("html")[0].style.fontSize = _w/7.5+"px";
+    window.onresize = function(){
+        var _w = document.body.clientWidth;
+        document.getElementsByTagName("html")[0].style.fontSize = _w/7.5+"px";
+    }
+
+/*    var _w = $(window).width();
+    $('html').css('font-size',_w/7.5+'px');
+    $(window).resize(function(){
+        var _w = $(window).width();
+        $('html').css('font-size',_w/7.5+'px');
+    });
+    var font_size = parseInt(_w/7.5*10)/10;*/
+</script>
+</html>

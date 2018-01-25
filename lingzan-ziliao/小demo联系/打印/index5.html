@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div onclick="javascript:  history.pushState({}, document.title, '?' + (i++))">点击我pushStatus</div>
+<div onclick="javascript:  history.go(-1)">点击我history.go(-1)</div>
+</body>
+<script>
+    var i = 0;
+    window.onpopstate = function (e) {
+        console.log(e);
+    }
+ 
+</script>
+</html>

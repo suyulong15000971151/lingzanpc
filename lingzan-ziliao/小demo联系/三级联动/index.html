@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>zcity</title>
+
+<link rel="stylesheet" type="text/css" href="css/zcity.css">
+
+</head>
+<body>
+
+<table class="demoTable">
+    <thead>
+        <tr>
+            <th class="td-01"><h6 class="title">一级数据</h6></th>
+            <th class="td-02"><h6 class="title">二级数据</h6></th>
+            <th class="td-03"><h6 class="title">三级数据</h6></th>
+            <th class="td-04"><h6 class="title">一至三级数据</h6></th>
+            <th class="td-05"><h6 class="title">二至三级数据-有初始值</h6></th>
+            <th class="td-06"><h6 class="title">一至三级数据-有初始值</h6></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          
+            <td class="td-04">
+                <!--zcityGroup start-->
+                <div class="zcityGroup" city-range="{'level_start':1,'level_end':3}"></div>
+                <!--zcityGroup end-->
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/zcity.js"></script>
+
+<script type="text/javascript">
+zcityrun('.zcityGroup');
+</script>
+
+</body>
+</html>

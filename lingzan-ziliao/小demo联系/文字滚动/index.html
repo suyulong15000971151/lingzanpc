@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+ <style type="text/css">
+   .wrap{padding:10px;border:1px #ccc solid; width:500px;margin:20px auto;}
+   .roll-wrap{height:130px;overflow:hidden;}
+
+ </style>
+<body>
+  <div class="wrap">
+    <div class="roll-wrap" id="roll-wrap">
+        <ul>
+            <li>JS文本向上滚动1</li>
+            <li>JS文本向上滚动2</li>
+            <li>JS文本向上滚动3</li>
+            <li>JS文本向上滚动4</li>
+            <li>JS文本向上滚动5</li>
+            <li>JS文本向上滚动6</li>
+            <li>JS文本向上滚动7</li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+	function scrollTxt(){
+    var controls={}, 
+        values={},
+        t1=200, /*播放动画的时间*/
+        t2=2000, /*播放时间间隔*/
+        si;
+    controls.rollWrap=$("#roll-wrap");
+    controls.rollWrapUl=controls.rollWrap.children();
+    controls.rollWrapLIs=controls.rollWrapUl.children();
+    values.liNums=controls.rollWrapLIs.length;
+    values.liHeight=controls.rollWrapLIs.eq(0).height();
+    values.ulHeight=controls.rollWrap.height();
+    this.init=function(){
+        autoPlay();
+        pausePlay();
+    }
+    /*滚动*/
+    function play(){
+        controls.rollWrapUl.animate({"margin-top" : "-"+values.liHeight}, t1, function(){
+            $(this).css("margin-top" , "0").children().eq(0).appendTo($(this));
+        });
+    }
+    /*自动滚动*/
+    function autoPlay(){
+        /*如果所有li标签的高度和大于.roll-wrap的高度则滚动*/
+        if(values.liHeight*values.liNums > values.ulHeight){
+            si=setInterval(function(){
+                play();
+            },t2);
+        }
+    }
+    /*鼠标经过ul时暂停滚动*/
+    function pausePlay(){
+        controls.rollWrapUl.on({
+            "mouseenter":function(){
+                clearInterval(si);
+            },
+            "mouseleave":function(){
+                autoPlay();
+            }
+        });
+    }
+}
+new scrollTxt().init();
+</script>
+</body>
+</html>

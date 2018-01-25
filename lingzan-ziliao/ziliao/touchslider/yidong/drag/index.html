@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>Drag</title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style>
+			.box{
+				font-family: "microsoft yahei";
+				width:100px;
+				height:100px;
+				background-color:olive;
+				position:absolute;
+				top:0;
+				left:0;
+				line-height:100px;
+				text-align:center;
+				font-size:16px;
+				color:#fff;
+				
+			}
+			.box:hover{
+				cursor: move;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">鼠标拖动！</div>
+		<script type="text/javascript">
+			var box=document.getElementsByClassName("box")[0];
+			box.addEventListener('touchstart',function(event){
+				if(event.targetTouches.length==1){
+					event.preventDefault();
+					var touch=event.targetTouches[0];
+					console.log('按下');
+				}
+			},false);
+			box.addEventListener('touchmove',function(event){
+				if(event.targetTouches.length==1){
+					event.preventDefault();
+					var touch=event.targetTouches[0];
+					
+					box.style.left=touch.pageX-50+'px';
+					box.style.top=touch.pageY-50+'px';
+				}
+			},false);
+			box.addEventListener('touchend',function(enent){
+				if(event.targetTouches.length==0){
+					event.preventDefault();
+					var touch=event.targetTouches[0];
+					console.log('抬起。。。')
+				}
+			},false)
+		</script>
+	</body>
+</html>

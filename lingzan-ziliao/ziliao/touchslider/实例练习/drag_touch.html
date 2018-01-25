@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<title>Drag</title>
+	<script src="http://apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="mystyle.css">-->
+	<!--[if lte IE 8]>
+	我是IE8（包括）以下
+	<![endif]-->
+	<!--[if lt IE 9]>
+	我是IE9（包括）以上
+	<![endif]-->
+	<style>
+		.box {
+			font-family: "Microsoft Yahei";
+			width: 100px;
+			height: 100px;
+			background-color: #00a0e9;
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 100px;
+			text-align: center;
+			font-size: 16px;
+			color: #fff;
+		}
+
+		.box:hover {
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">鼠标拖动我！</div>
+<script type="text/javascript">
+	var box = document.getElementsByClassName('box')[0];
+
+	box.addEventListener('touchstart', function(event) {
+		// 如果这个元素的位置内只有一个手指的话
+		if (event.targetTouches.length == 1) {
+			event.preventDefault();// 阻止浏览器默认事件，重要
+			var touch = event.targetTouches[0];
+			console.log('按下。。。');
+		}
+	}, false);
+
+	box.addEventListener('touchmove', function(event) {
+		// 如果这个元素的位置内只有一个手指的话
+		if (event.targetTouches.length == 1) {
+			event.preventDefault();// 阻止浏览器默认事件，重要
+			var touch = event.targetTouches[0];
+			// 把元素放在手指所在的位置
+			box.style.left = touch.pageX-50 + 'px';
+			box.style.top = touch.pageY-50 + 'px';
+		}
+	}, false);
+
+	box.addEventListener('touchend', function(event) {
+		// 如果这个元素的位置内只有一个手指的话
+		if (event.targetTouches.length == 0) {
+			event.preventDefault();// 阻止浏览器默认事件，重要
+			var touch = event.targetTouches[0];
+			console.log('抬起。。。');
+		}
+	}, false);
+</script>
+</body>
+</html>

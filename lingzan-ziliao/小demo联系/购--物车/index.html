@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>RunJS</title>
+	<script id="jquery_182" type="text/javascript" class="library" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<style type="text/css">
+/*       button{
+	            border:1px solid #ccc;
+	              cursor:pointer;
+                   display:block;
+                        margin:auto;
+                    position:relative;
+                   top:100px;
+               }*/
+
+                  .posBtnR{
+                  	width:100px;
+                  	height:100px;
+                  	background:red;
+                  	position:absolute;
+                  	right:0;
+                  	top:0;
+                  	z-index:1;
+                  }
+
+                img{
+                	margin-top:
+                }
+                .box{height:352px;}
+                .box span{display: inline-block;background:olive;color:#fff;padding:5px;z-index: 3000}
+	</style>
+	<body>
+  <div class="box">
+    <img src='http://sandbox.runjs.cn/uploads/rs/198/kn8pai72/index_28.jpg' >
+    <span>购物车</span>
+  </div>
+		
+		<div class='posBtnR' id='posBtnR'>
+			
+		</div>
+		<script type="text/javascript">
+
+         $('.box span').click(function(){
+          
+          that=$(this).parent().children('img:last')
+        // var m= $(this).parent().find('span').length
+        // console.log(m)
+          MoveBox(that);
+          $(this).css({position:'absolute',top:'329px',left:'331px'})
+         })
+
+
+
+                function MoveBox(obj) {
+        var divTop = $(obj).offset().top;
+        var divLeft = $(obj).offset().left;
+        $(obj).css({ "position": "absolute", "z-index": "0", "left": divLeft + "px", "top": divTop + "px" });
+        $(obj).parent().append($(obj).clone());
+        // $(obj).parent().append($(obj).next().clone());
+        $(obj).animate({ "left": ($("#posBtnR").offset().left) + "px", "top": $("#posBtnR").offset().top + "px", "width": "100px", "height": "70px" }, 1000, function () {
+            $(obj).animate({ "left": $("#posBtnR").offset().left + "px", "top": $("#posBtnR").offset().top + "px" }, 1000);
+            num++;
+        });
+    }
+
+		</script>
+	</body>
+	</body>
+</html>

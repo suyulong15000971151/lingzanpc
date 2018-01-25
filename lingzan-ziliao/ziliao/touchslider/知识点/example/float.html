@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>子元素浮动父元素缺失高度问题</title>
+	<style type="text/css">
+		.float{
+			width: 100px;
+			height: 100px;
+			border: 2px solid red;
+			float: left;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div style="overflow: hidden;">
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+		<div class="float"></div>
+	</div>
+	<div>我是下一个元素</div>
+</body>
+</html>

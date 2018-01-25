@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+
+
+<title>slider</title>
+<link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<style>
+	p{ width:100%; height:40px; font-size:20px; color:#333; line-height:40px; text-align:center; font-family:"Î¢ÈíÑÅºÚ"}
+  /*.bx-wrapper .bx-pager{display: none;}*/
+  .bx-wrapper .bx-controls-direction a{display: none;}
+  img{text-align: right;font-size:12px;color:#fff;}
+</style>
+</head>
+
+<body>
+
+    
+   
+
+    
+    
+    
+ 	<!-- ---------------------------------slider6--------------------------------------------- -->
+    <!-- <p>slider6(Image)</p> -->
+    <div class="slider6">
+      <div class="slide"><img src="http://placehold.it/600x200&"></div>
+      <div class="slide"><img src="http://placehold.it/600x200&"></div>
+      <div class="slide"><img src="http://placehold.it/600x200&"></div>
+      <div class="slide"><img src="http://placehold.it/600x200&"></div> 
+    </div>
+    <script type="text/javascript">
+    var m=document.body.clientWidth;
+    console.log(m)
+        $(document).ready(function(){
+          $('.slider6').bxSlider({
+			     mode: 'fade',
+            slideWidth: m, 
+            slideMargin: 0
+          });
+        });
+    </script>
+    
+   
+    
+
+    
+   
+    
+
+    
+</body>
+
+</html>

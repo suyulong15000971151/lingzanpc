@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<child-com :msg="a">
+				<h1 slot="sot" >{{a.str}}</h1>
+			</child-com>
+		</div>
+		
+		<template id="child">
+			<div>
+				
+				<span>我是子组件</span>
+			    <input type="button" value="按钮" @click="change" /><br />
+			    <strong>{{msg.str}}</strong>
+			    <slot name="sot"></slot>
+			</div>
+			
+		</template>
+		
+		<script src="js/vue.js"></script>
+		<script>
+			new Vue({
+				el:"#box",
+				data:{
+					a:{
+						str:"我是父组件数据"
+					}
+				},
+				components:{
+					"child-com":{
+						template:"#child",
+						props:["msg"],
+						methods:{
+							change(){
+								this.msg.str="改变"
+							}
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

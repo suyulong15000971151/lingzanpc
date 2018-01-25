@@ -1,0 +1,35 @@
+/*这是banner海报区域*/
+.banner{width:100%;height:600px;background:url(../img/HomeBanner.jpg) no-repeat center center;background-size: 100% 100%;}
+/*这是图片展示区*/
+.fabrics{width:1200px;overflow: hidden;margin:30px auto 0;}
+.fabrics .title{width:100%;height:90px;line-height: 90px;}
+.fabrics .title span{float:left;font-size:18px;display: inline-block;overflow: hidden;}
+.fabrics .title span em{display: inline-block;width:3px;height:18px;float: left;background:#000;margin-top:35px;margin-right:25px}
+.fabrics .title i{float:right;font-size:18px;}
+.fabrics .content{width:100%;overflow: hidden;}
+.fabrics .content ul{overflow: hidden;}
+.fabrics .content ul li{float:left;width:33.3%;box-sizing: border-box;padding-bottom: 40px;}
+.fabrics .content ul li img{width:390px;height:260px;display:block;box-shadow:0px 5px 5px #999;transition: all 0.5s ease;}
+.fabrics .content ul li img:hover{transform: translateY(-50px);z-index: 33;}
+.fabrics .content ul li p{font-size:15px;margin-top:10px}
+/*专题*/
+.fabrics .zhuanti{width:100%;height:600px;background:url(../img/HomeBanner8.jpg) no-repeat center center;background-size: 100% 100%;}
+.fabrics .zhuan-sub{width:100%;overflow: hidden;margin-top:40px}
+.fabrics .zhuan-sub ul{overflow: hidden;}
+.fabrics .zhuan-sub ul li{float:left;width:50%;box-sizing: border-box;padding-bottom: 40px;}
+.fabrics .zhuan-sub ul li img{width:570px;height:330px;display: inline-block;box-shadow:0px 5px 5px #999;}
+.fabrics .zhuan-sub ul li p{font-size:15px;margin-top:10px}
+/*colorsearch*/
+.fabrics .colorsearch{width:100%;height:600px;background:url(../img/colorsearch_03.jpg) no-repeat center center;background-size: 100% 100%;}
+.fabrics .zhuan-sub{width:100%;overflow: hidden;margin-top:40px}
+.fabrics .zhuan-sub ul{overflow: hidden;}
+.fabrics .zhuan-sub ul li{float:left;width:50%;box-sizing: border-box;padding-bottom: 40px;}
+.fabrics .zhuan-sub ul li img{width:570px;height:330px;display: inline-block;box-shadow:0px 5px 5px #999;}
+.fabrics .zhuan-sub ul li p{font-size:15px;margin-top:10px}
+/*这是底部*/
+.right-img{margin-left:10px;display: block;}
+.right-img1{display: block;margin-left:30px}
+.middle-img{margin:0 auto 0;display: block;}
+.p1{text-indent: 30px;}
+.p{text-indent: 10px;}
+.pm{text-indent: 5px;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>rem_字体</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    p {
+        /*font-size: 20px;*/
+        font-size: .4rem;
+        text-align: center;
+        line-height: 1.3;
+        color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <!--Chrome不支持12px以下的字号-->
+    <p>
+        忆江南·江南忆
+        <br> 朝代：唐代
+        <br> 作者：白居易
+        <br> 江南忆，最忆是杭州。山寺月中寻桂子，郡亭枕上看潮头。何日更重游？
+        <br> 江南忆，其次忆吴宫。吴酒一杯春竹叶，吴娃双舞醉芙蓉。早晚复相逢？
+        <br>
+    </p>
+    鉴赏:
+    <br> 诗人早年因避乱来到江南，曾经旅居苏、杭二州。晚年又担任杭、苏刺史多年。江南的山山水水、一草一木给他留下了极深的印象。他也与那里的人民结下了深挚的友谊，直到晚年回到北方以后，仍然恋恋不已。三首《忆江南》词就是这种心情下的产物。作品表达了诗人对祖国大好河山的热爱，对以后文人词的发展，也产生了积极的作用
+    <script>
+    var fontSize = 50;
+    var _w = document.body.clientWidth;
+    document.getElementsByTagName("html")[0].style.fontSize = parseInt(_w * 50 / 375 * 10) / 10 + "px";
+    window.onresize = function() {
+        var _w = document.body.clientWidth;
+        document.getElementsByTagName("html")[0].style.fontSize = parseInt(_w * 50 / 375 * 10) / 10 + "px";
+    }
+    </script>
+</body>
+
+</html>

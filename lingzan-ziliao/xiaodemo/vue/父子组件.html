@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/vue.js"></script
+	<style>
+	</style>
+</head>
+<body>
+	<div id="box">
+		<aaa :a="a"></aaa>
+	</div>
+
+
+	<script>
+//	Vue.component("aaa",{
+//		props:['a'],
+//		template:"<h1>{{a}}</h1>"
+//	})
+	
+		var vm=new Vue({
+			el:'#box',
+			data:{
+				a:'hello good morning'
+			},
+			components:{
+				'aaa':{
+					props:['a'],
+					template:'<h1>{{a}}</h1>'
+					
+//					components:{
+//						'bbb':{
+//							
+//							template:'<h3>我是bbb组件</h3>'
+//						}
+//					}
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

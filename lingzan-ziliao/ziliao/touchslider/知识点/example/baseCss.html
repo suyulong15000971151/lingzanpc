@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 基础知识回顾</title>
+    <style type="text/css">
+    /* 字体：
+		颜色color ，
+		字体大小font-size，
+		字体粗细：font-weight，
+		字体风格：font-style，
+		字体系列：font-family
+	   CSS3属性：
+		字体阴影：text-shadow
+	*/
+    .font {
+        color: red;
+        color: #ff0000;
+        /* 如果型如：aabbcc，可以写成abc。*/
+        color: rgb(255, 0, 0);
+        color: rgba(255, 0, 0, .5);
+        /* 在CSS中0.x，一般都写成.x  */
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+        font-family: 'Microsoft Yahei';
+        /* 微软雅黑  */
+        text-shadow: 5px 5px 5px #00FF00;
+    }
+    /* 
+		宽度：width，
+		高度：height，
+		背景颜色：background
+		边框：border
+		外边距：margin
+		内边距：padding
+	 */
+    
+    .div1 {
+        width: 200px;
+        height: 100px;
+        background: rgba(0, 255, 0, .3);
+        border: 2px solid red;
+        margin: 10px 20px 10px 20px;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .div2 {
+        width: 200px;
+        height: 100px;
+        background: rgba(0, 255, 0, .3);
+        border: 2px solid red;
+        margin: 10px 20px 10px 20px;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .float {
+        float: left;
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <p class="font">字体</p>
+    <div class="div1">普通div</div>
+    <div class="div2">border-box div</div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+    <div class="float"></div>
+</body>
+
+</html>

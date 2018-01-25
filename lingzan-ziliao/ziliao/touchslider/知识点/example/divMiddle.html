@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div 居中</title>
+	<style type="text/css">
+		.center{
+			width: 400px;
+			height: 400px;
+			background: red;
+			left: 50%;
+			top: 50%;
+		    position: absolute;
+		    margin-top: -200px;
+		    margin-left: -200px;
+		}
+
+		.center_translate{
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			background: blue;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<!--<div class="center"></div>-->
+	<div class="center_translate"></div>
+</body>
+</html>

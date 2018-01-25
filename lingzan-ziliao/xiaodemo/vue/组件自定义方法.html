@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<my-home :child="message"></my-home>
+		</div>
+		<template id="aaa">
+			<div>
+				<h3>我是组件</h3>
+			    <strong>{{child}}</strong>
+			</div>
+			
+		</template>
+		<script src="js/vue.js"></script>
+		<script>
+		var Home={
+			template:'#aaa',
+			props:['child']
+		}
+			new Vue({
+				el:"#box",
+				data:{
+					message:"welcome vue2.0"
+				},
+				components:{
+					"my-home":Home,
+				}
+			})
+		</script>
+	</body>
+</html>

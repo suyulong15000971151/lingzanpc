@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props</title>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    var HelloMessage = React.createClass({
+        render: function() {
+            return <h1>Hello {this.props.name}</h1>;
+        }
+    });
+
+    ReactDOM.render(
+    <HelloMessage name="尚学堂1111" />,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>港口信息新增</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/portInfoAdd.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css"/>
+	</head>
+	<body>
+		<div>
+			<ol class="breadcrumb">
+				<li><a href="#">基础管理</a></li>
+				<li><a href="#">港口信息管理</a></li>
+				<li class="active">港口信息修改</li>
+			</ol>
+		</div>
+		<div class="port-info-add">
+			<form action="" method="post">
+				<dl class="clearfix">
+					<dt>港口编号：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口名称：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口类型：</dt>
+					<dd>
+						<select name="">
+							<option value="">请选择</option>
+							<option value="">集装箱</option>
+							<option value="">其他</option>
+						</select>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>所属单位：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口位置(经纬度)：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>港口半径(米)：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>状态：</dt>
+					<dd>
+						<div class="port-info-add-switch">
+							<span class="port-info-add-switch-on">ON</span>
+							<!--<span class="port-info-add-switch-off">OFF</span>-->
+						</div>
+					</dd>
+				</dl>
+				<dl class="clearfix">
+					<dt>备注：</dt>
+					<dd>
+						<input type="text" />
+					</dd>
+				</dl>
+				<input type="submit" value="确定"/>
+			</form>
+		</div>
+		<script src="js/lib/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.port-info-add-switch').click(function(){
+					var $data = $('.port-info-add-switch span').html();
+					var $off = '<span class="port-info-add-switch-off">OFF</span>';
+					var $on = '<span class="port-info-add-switch-on">ON</span>';
+					if($data == 'ON'){
+						$('.port-info-add-switch .port-info-add-switch-on').remove();
+						$('.port-info-add-switch').append($off);
+					}
+					if($data == 'OFF'){
+						$('.port-info-add-switch .port-info-add-switch-off').remove();
+						$('.port-info-add-switch').append($on);
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

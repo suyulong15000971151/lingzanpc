@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{margin: 0;padding: 0}
+        .box{
+            display: -webkit-flex; /* Safari */
+            display: flex;
+        }
+        .item{
+            flex: 1;
+        }
+
+        ul li{
+            list-style-type:none;
+            height: 50px;
+            line-height: 50px;
+            background-color: yellow;
+            text-align: center;
+            box-sizing: border-box;
+            border-right: 1px solid #fff;
+        }
+
+        .li{
+            float: left;
+            width: 33.333%;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+<ul>
+    <li class="li">美食</li>
+    <li class="li">洗浴</li>
+    <li class="li">足疗</li>
+</ul>
+-->
+
+
+<ul class="box">
+    <li class="item">美食</li>
+   <!-- <li class="item">洗浴</li>-->
+  <!--  <li class="item">足疗</li>-->
+</ul>
+</body>
+</html>

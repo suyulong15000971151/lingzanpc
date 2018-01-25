@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Amaze UI Widget</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 不提供支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+
+     <header>
+      <a href="###"><img src="img/删除icon.png" alt="" style="width:0.16rem;height:0.16rem"></a>
+      <em></em>
+      <p class="p-top">让好设计走进我们的生活</p>
+      <i><img src="img/更多icon.png" alt="" /></i>
+     </header>
+     <div>
+      <script type="text/x-handlebars-template" id="amz-tpl">
+             {{>slider slider}}
+          </script>
+         
+     </div>
+
+<script type="text/x-handlebars-template" id="amz-tpl">
+
+
+  {{>slider slider}}
+
+
+</script>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.js"></script>
+<script src="assets/js/handlebars.min.js"></script>
+<script src="assets/js/amazeui.widgets.helper.js"></script>
+<script>
+  var $tpl = $('#amz-tpl');
+  var source = $tpl.text();
+  var template = Handlebars.compile(source);
+  var data = {
+  
+
+    slider: {
+      "theme": "a2",
+      //"sliderConfig": "{\"directionNav\":false}",
+      "content": [
+        {
+          "img": "http://s.amazeui.org/media/i/demos/bing-1.jpg"
+        },
+        {
+          "img": "http://s.amazeui.org/media/i/demos/bing-2.jpg"
+        },
+        {
+          "img": "http://s.amazeui.org/media/i/demos/bing-3.jpg"
+        },
+        {
+          "img": "http://s.amazeui.org/media/i/demos/bing-4.jpg"
+        }
+      ]
+    },
+
+
+  };
+  var html = template(data);
+
+  $tpl.before(html);
+
+
+</script>
+</body>
+</html>

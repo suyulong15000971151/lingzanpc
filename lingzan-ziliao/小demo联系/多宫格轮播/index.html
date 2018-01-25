@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/global.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<!--效果开始-->
+<div class="bd_con4">
+
+ <div class="bd_c4l">
+  <ul>
+   <li class="bd_cutLi">南京</li>
+   <li>上海</li>
+   <li>武汉</li>
+  </ul>
+ </div>
+
+ <div class="bd_c4r">
+  <div class="bd_c4top">
+   <a href="#" class="bd_lbtn"></a>
+   <div class="bd_chgBox">
+    <div class="bd_long">
+     <ul>
+      <li>
+      <a href="http://www.sucaijiayuan.com" target="blank"><img src="images/bd_photo1.jpg" width="800" height="800" /></a>
+      </li>
+      <li>
+
+      <a href="http://www.sucaijiayuan.com" target="blank"><img src="images/bd_photo2.jpg" width="800" height="800" /></a>
+      </li>
+      <li>
+      <a href="http://www.sucaijiayuan.com" target="blank"><img src="images/bd_photo3.jpg" width="800" height="800" /></a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <a href="#" class="bd_rbtn"></a>
+  </div>
+ </div>
+
+
+
+</div>
+<script language="javascript">
+var cutItm=0;
+
+function autoPlay(){
+	cutItm++;
+	if(cutItm>2){
+		cutItm=0;
+	}
+	$(".bd_c4l li").removeClass("bd_cutLi");
+	$(".bd_c4l li").eq(cutItm).addClass("bd_cutLi");
+    var leftVal=cutItm*800;
+    $(".bd_long").animate({left:-leftVal},500);
+}
+
+var timeer=setInterval(autoPlay,3000);
+$(".bd_c4l,.bd_c4top").hover(function(){clearInterval(timeer)},function(){timeer=setInterval(autoPlay,3000);});
+
+$(".bd_c4l li").click(function(){
+	cutItm=$(".bd_c4l li").index(this);
+	$(".bd_c4l li").removeClass("bd_cutLi");$(this).addClass("bd_cutLi");
+	var leftVal=cutItm*800;
+    $(".bd_long").animate({left:-leftVal},500);
+	});
+$(".bd_lbtn").click(function(){
+	cutItm--;
+	if(cutItm<0){
+		cutItm=2;
+	}
+	$(".bd_c4l li").removeClass("bd_cutLi");
+	$(".bd_c4l li").eq(cutItm).addClass("bd_cutLi");
+    var leftVal=cutItm*800;
+    $(".bd_long").animate({left:-leftVal},500);
+});
+$(".bd_rbtn").click(function(){
+	cutItm++;
+	if(cutItm>2){
+		cutItm=0;
+	}
+	$(".bd_c4l li").removeClass("bd_cutLi");
+	$(".bd_c4l li").eq(cutItm).addClass("bd_cutLi");
+    var leftVal=cutItm*800;
+    $(".bd_long").animate({left:-leftVal},500);
+});
+</script>
+
+
+
+</body>
+</html>

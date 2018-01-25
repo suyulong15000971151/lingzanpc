@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#app',
+                data:{
+                	message:"hello world"
+                },
+                methods:{
+                    get:function(){
+                    	this.$http.post('get.php',{a:2,b:3},{emulateJSON:true}).then(function(res){
+                    		alert(res.data)
+                    	},function(res){
+                    		alert(res.status)
+                    	})
+                    },
+                    change:function(){
+                    this.message=this.message.replace(" ",'')
+                    }
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="按钮" @click="get()">
+		<p @click="change()">{{message}}</p>
+	</div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

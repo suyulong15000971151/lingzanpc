@@ -1,0 +1,249 @@
+.jr-pagination {
+	height: 26px;
+	float: right;
+}
+
+.jr-pagination span {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.jr-pagination .previous {
+	position: relative;
+	width: 63px;
+	height: 24px;
+	border: 1px solid #CCC;
+	line-height: 24px;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.jr-pagination .previous-disabled,
+.jr-pagination .next-disabled {
+	border: 1px solid #CCC;
+	color: #999;
+}
+
+.jr-pagination .previous i {
+	position: absolute;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	top: 7px;
+	left: 5px;
+	border: 5px solid #FFF;
+	border-right-color: #999;
+	cursor: pointer;
+}
+
+.jr-pagination .previous-disabled i {
+	border-right-color: #CCC;
+}
+
+.jr-pagination .page span {
+	float: left;
+}
+
+.jr-pagination .page-num {
+	margin-right: 5px;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	border: 1px solid #CCC;
+	font-family: "Arial";
+	font-size: 12px;
+	color: #333;
+}
+
+.jr-pagination .current {
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	margin-right: 5px;
+	color: #FF9500;
+}
+
+.jr-pagination .hover {
+	color: #FF9500;
+}
+
+.jr-pagination .ellipsis {
+	margin-right: 5px;
+	width: 16px;
+	height: 26px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.jr-pagination .next {
+	position: relative;
+	width: 63px;
+	height: 24px;
+	border: 1px solid #CCC;
+	line-height: 24px;
+	cursor: pointer;
+	margin-right: 26px;
+}
+
+.jr-pagination .next i {
+	position: absolute;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	top: 7px;
+	right: 3px;
+	border: 5px solid #FFF;
+	border-left-color: #999;
+	cursor: pointer;
+}
+
+.jr-pagination .next-disabled i {
+	border-left-color: #CCC;
+}
+
+.jr-pagination .jump-to-num {
+	margin-right: 8px;
+	height: 22px;
+	width: 26px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.jr-pagination .jump {
+	cursor: pointer;
+	height: 24px;
+	width: 48px;
+	border: 1px solid #CCC;
+	line-height: 24px;
+	text-align: center;
+}
+
+.pagination-txt {
+	height: 26px;
+	line-height: 26px;
+}
+
+.ml20 {
+	margin-left: 20px;
+}
+
+.mr20 {
+	margin-right: 20px;
+}
+
+.mr7 {
+	margin-right: 7px;
+}
+
+.mr40 {
+	margin-right: 40px;
+}
+
+.wait-wrap {
+	height: 500px;
+	text-align: center;
+}
+
+.wait-wrap .wait .info {
+	padding-top: 200px;
+}
+
+.wait-wrap .wait .info img{
+	margin: 0 auto;
+}
+ 
+
+.wait-wrap .desc {
+	text-align: center;
+}
+
+.section-grid {
+	border: 1px solid #EEE;
+	border-bottom: 0;
+}
+
+.section-grid .g-row-head {
+	background-color: #f8f8f8;
+}
+
+.section-grid .g-row {
+	border-bottom: 1px solid #EEE;
+	color: #666;
+}
+
+.section-grid .g-head {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+	width: 13%;
+	text-align: center;
+}
+
+.section-grid .g-data {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+	width: 13%;
+	text-align: center;
+}
+.section-grid  .portCheckBox{
+	width: 3%;
+}
+.section-grid  .port-num{
+	width: 4%;
+}
+.g-row .portCheckBox{
+	widows: 3%;
+} 
+.g-row .port-num{
+	widows: 4%;
+} 
+.mt10 {
+	margin-top: 10px;
+}
+
+.mt20 {
+	margin-top: 20px;
+}
+
+.mt30 {
+	margin-top: 30px;
+}
+
+.mt50 {
+	margin-top: 50px;
+}
+
+.jr-pagination {
+	height: 26px;
+	float: right;
+	font-size: 12px;
+}
+
+.J_fundName,
+.J_fundType {
+	height: 26px;
+	line-height: 26px;
+	padding: 0 5px;
+	outline: 0;
+}
+
+.J_paginationSearchBtn {
+	margin-bottom: 10px;
+	width: 100px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0 5px;
+	outline: 0;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式2</title>
+    <style>
+        .mystyle{
+            font-size: 100px;
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    var myStyle = {
+        fontSize: 100,
+        color: '#FF0000'
+    };
+    ReactDOM.render(
+    <h1 className="mystyle">React教程</h1>,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>

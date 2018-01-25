@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta  charset="utf-8"/>
+<!--<script type="text/javascript">
+function printpage()
+  {
+  window.print()
+  }
+</script>-->
+<style>
+	img{width:200px;height:500px;margin:0 auto 0;display: block;}
+	 @media print {
+    /*.noprint{
+      display: none;
+    }*/
+   
+   img{width:500px;height:500px;margin:0 auto 0;display: block;}
+  }
+	
+</style>
+</head>
+<body>
+<h1>这块内容不需要打印</h1>
+<!--startprint-->
+                     <div class="content">
+  这里是需要打印的内容
+    .....
+</div>
+
+<img src="img/1.jpg" alt="" class="noprint">
+<!--endprint-->
+<h1>这块内容不需要打印</h1>
+
+
+
+<script>
+	function doPrint() {   
+    bdhtml=window.document.body.innerHTML;   
+    sprnstr="<!--startprint-->";   
+    eprnstr="<!--endprint-->";   
+    prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);   
+    prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));   
+    window.document.body.innerHTML=prnhtml;  
+    window.print();   
+}
+	doPrint()
+</script>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			  		$.ajax({
+			  			type:'post',
+			  			url:'http://47.100.45.229:8080/xyl/port/getList',
+			  			dataType:'jsonp',
+			  			jsonp:"callback",
+			  			success:function(msg){
+			  				console.log(msg)
+//			
+			  				
+			  		},
+			  		error:function(msg){
+			  			console.log(msg.state)
+			  		}
+			  		})
+			  	})
+		</script>
+    http://47.100.45.229:8080/xyl/port/getList?callback=jQuery214038094153024944344_1514972578840&_=1514972578841
+    
+    
+    http://f.apiplus.cn/bj11x5.json
+</body>
+</html>
+
+http://f.apiplus.cn/bj11x5.json

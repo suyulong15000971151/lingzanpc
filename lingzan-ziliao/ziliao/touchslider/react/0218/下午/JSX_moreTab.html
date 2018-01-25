@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多个标签</title>
+</head>
+<body>
+<div id="example"></div>
+<script src="../react-15.4.0/build/react.min.js"></script>
+<script src="../react-15.4.0/build/react-dom.min.js"></script>
+<!--让浏览器支持babel语法-->
+<script src="../react-15.4.0/build/babel.min.js"></script>
+<script type="text/babel">
+    ReactDOM.render(
+            <div>
+                <h1>React教程</h1>
+                <h2>欢迎学习 React</h2>
+                <p data-myattribute = "myvalue">这是一个很不错的 JavaScript 库!</p>
+            </div>,
+            document.getElementById('example')
+    );
+</script>
+</body>
+</html>
